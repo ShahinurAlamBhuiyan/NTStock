@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
@@ -15,47 +16,52 @@
     <children>
         <Pane prefHeight="670.0" prefWidth="616.0" style="-fx-background-color: #191919;">
             <children>
-                <TextField layoutX="115.0" layoutY="284.0" prefHeight="49.0" prefWidth="386.0" promptText="Username">
+                <TextField layoutX="115.0" layoutY="269.0" prefHeight="42.0" prefWidth="386.0" promptText="Username">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <TextField layoutX="115.0" layoutY="368.0" prefHeight="49.0" prefWidth="386.0" promptText="Password">
+                <TextField layoutX="115.0" layoutY="335.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <CheckBox layoutX="115.0" layoutY="439.0" mnemonicParsing="false" text="Stay signed in" textFill="WHITE">
+                <CheckBox layoutX="115.0" layoutY="396.0" mnemonicParsing="false" text="Stay signed in" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </CheckBox>
-                <Button layoutX="115.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="386.0" style="-fx-background-color: #2a9311;" text="SIGN IN" textFill="WHITE">
+                <Button layoutX="115.0" layoutY="437.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #2a9311;" text="SIGN IN" textFill="WHITE">
                     <font>
-                        <Font name="Arial Bold" size="21.0" />
+                        <Font name="Arial Bold" size="18.0" />
                     </font>
                 </Button>
-                <Text fill="WHITE" layoutX="247.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?">
+                <Text fill="WHITE" layoutX="247.0" layoutY="604.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?">
                     <font>
-                        <Font name="Arial Bold" size="14.0" />
+                        <Font name="Arial Bold Italic" size="14.0" />
                     </font>
                 </Text>
-                <ToggleButton layoutX="115.0" layoutY="231.0" mnemonicParsing="false" text="Customer">
+                <ToggleButton layoutX="115.0" layoutY="214.0" mnemonicParsing="false" text="Customer">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </ToggleButton>
-                <ToggleButton layoutX="219.0" layoutY="231.0" mnemonicParsing="false" text="Retailer">
+                <ToggleButton layoutX="219.0" layoutY="214.0" mnemonicParsing="false" text="Retailer">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </ToggleButton>
-                <ToggleButton layoutX="308.0" layoutY="231.0" mnemonicParsing="false" text="Dealer">
+                <ToggleButton layoutX="308.0" layoutY="214.0" mnemonicParsing="false" text="Dealer">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </ToggleButton>
-                <ToggleButton layoutX="387.0" layoutY="231.0" mnemonicParsing="false" text="Adminastrator">
+            <Label layoutX="113.0" layoutY="489.0" text="Not  have an account?" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+                <ToggleButton layoutX="387.0" layoutY="214.0" mnemonicParsing="false" text="Adminastrator">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
@@ -65,6 +71,31 @@
                         <Image url="@../Image/ntlogo.png" />
                     </image>
                 </ImageView>
+            <Label layoutX="242.0" layoutY="489.0" text="Sign up here." textFill="#f8f8f8" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="    Google " textFill="#363636">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="142.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/googleLogo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="321.0" layoutY="521.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="       Facebook " textFill="#363636">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="339.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/facebook.png" />
+               </image>
+            </ImageView>
             </children>
         </Pane>
     </children>

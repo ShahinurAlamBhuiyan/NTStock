@@ -17,18 +17,18 @@
     <children>
         <Pane prefHeight="730.0" prefWidth="620.0" style="-fx-background-color: #191919;">
             <children>
-                <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="162.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="161.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Image/ntlogo.png" />
                     </image>
                 </ImageView>
-                <TextField layoutX="117.0" layoutY="149.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name" style="-fx-background-radius: 18 18 18 18;">
+                <TextField layoutX="116.0" layoutY="172.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <DatePicker layoutX="117.0" layoutY="305.0" prefHeight="27.0" prefWidth="170.0" promptText="Date of birth" />
-                <MenuButton layoutX="361.0" layoutY="305.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Gender">
+                <DatePicker layoutX="116.0" layoutY="328.0" prefHeight="27.0" prefWidth="170.0" promptText="Date of birth" />
+                <MenuButton layoutX="360.0" layoutY="328.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Gender">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Male" />
                         <MenuItem mnemonicParsing="false" text="Female" />
@@ -37,22 +37,22 @@
                         <Font name="Arial Bold" size="12.0" />
                     </font>
                 </MenuButton>
-                <CheckBox layoutX="117.0" layoutY="393.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="262.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
+                <CheckBox layoutX="117.0" layoutY="423.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="270.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </CheckBox>
-                <TextField layoutX="117.0" layoutY="203.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email" style="-fx-background-radius: 18 18 18 18;">
+                <TextField layoutX="116.0" layoutY="226.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <TextField layoutX="117.0" layoutY="257.0" prefHeight="36.0" prefWidth="386.0" promptText="  password" style="-fx-background-radius: 18 18 18 18;">
+                <TextField layoutX="116.0" layoutY="280.0" prefHeight="36.0" prefWidth="386.0" promptText="  password">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <MenuButton layoutX="361.0" layoutY="346.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Area">
+                <MenuButton layoutX="360.0" layoutY="369.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Area">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Dhaka" />
                         <MenuItem mnemonicParsing="false" text="Barishal" />
@@ -66,27 +66,22 @@
                         <Font name="Arial Bold" size="12.0" />
                     </font>
                 </MenuButton>
-                <Button layoutX="117.0" layoutY="474.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #27AE60; -fx-background-radius: 18 18 18 18;" text="Continue" textFill="WHITE">
+                <Button layoutX="116.0" layoutY="489.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="Sign up now" textFill="WHITE">
                     <font>
-                        <Font name="Arial Bold" size="21.0" />
+                        <Font name="Arial Bold" size="18.0" />
                     </font>
                 </Button>
-                <Text fill="WHITE" layoutX="79.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By joining NT Stock, you are agreed to NT Stock's terms &amp; condition and privecy policys" textAlignment="CENTER">
+                <Text fill="WHITE" layoutX="78.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By joining NT Stock, you are agreed to NT Stock's terms &amp; condition and privecy policys" textAlignment="CENTER">
                     <font>
                         <Font name="Arial Bold" size="11.0" />
                     </font>
                 </Text>
-                <Button layoutX="117.0" layoutY="532.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 18 18 18 18;" text="Continue with Google" textFill="#363636">
+                <Text fill="WHITE" layoutX="117.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" textAlignment="CENTER">
                     <font>
-                        <Font name="Arial Bold" size="21.0" />
-                    </font>
-                </Button>
-                <Text fill="WHITE" layoutX="277.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN" textAlignment="CENTER" underline="true">
-                    <font>
-                        <Font name="Arial Bold" size="19.0" />
+                        <Font name="Arial" size="15.0" />
                     </font>
                 </Text>
-                <MenuButton layoutX="117.0" layoutY="346.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="170.0" text="User Type">
+                <MenuButton layoutX="116.0" layoutY="369.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="170.0" text="User Type">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Customer" />
                         <MenuItem mnemonicParsing="false" text="Retailer" />
@@ -97,21 +92,11 @@
                         <Font name="Arial Bold" size="12.0" />
                     </font>
                 </MenuButton>
-                <Button layoutX="117.0" layoutY="590.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #3498DB; -fx-background-radius: 18 18 18 18;" text="Continue with Facebook" textFill="WHITE">
-                    <font>
-                        <Font name="Arial Bold" size="21.0" />
-                    </font>
-                </Button>
-                <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="156.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../Image/googleLogo.png" />
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="36.0" fitWidth="56.0" layoutX="134.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../Image/facebook.png" />
-                    </image>
-                </ImageView>
+            <Text fill="WHITE" layoutX="296.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign-in here" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
             </children>
         </Pane>
     </children>
