@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="SignIn.SignInController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane prefHeight="670.0" prefWidth="616.0" style="-fx-background-color: #191919;">
+            <children>
+                <TextField layoutX="115.0" layoutY="284.0" prefHeight="49.0" prefWidth="386.0" promptText="Username">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField layoutX="115.0" layoutY="368.0" prefHeight="49.0" prefWidth="386.0" promptText="Password">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </TextField>
+                <CheckBox layoutX="115.0" layoutY="439.0" mnemonicParsing="false" text="Stay signed in" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </CheckBox>
+                <Button layoutX="115.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="386.0" style="-fx-background-color: #2a9311;" text="SIGN IN" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="21.0" />
+                    </font>
+                </Button>
+                <Text fill="WHITE" layoutX="247.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Text>
+                <ToggleButton layoutX="115.0" layoutY="231.0" mnemonicParsing="false" text="Customer">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </ToggleButton>
+                <ToggleButton layoutX="219.0" layoutY="231.0" mnemonicParsing="false" text="Retailer">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </ToggleButton>
+                <ToggleButton layoutX="308.0" layoutY="231.0" mnemonicParsing="false" text="Dealer">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </ToggleButton>
+                <ToggleButton layoutX="387.0" layoutY="231.0" mnemonicParsing="false" text="Adminastrator">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </ToggleButton>
+                <ImageView fitHeight="143.0" fitWidth="405.0" layoutX="128.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/ntlogo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>
