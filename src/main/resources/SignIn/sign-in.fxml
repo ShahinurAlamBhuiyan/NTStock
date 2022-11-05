@@ -62,7 +62,7 @@
                 </ToggleButton>
                 <ImageView fitHeight="143.0" fitWidth="405.0" layoutX="128.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-<!--                        <Image url="C:\Users\user\NTStock\src\main\resources\Image\ntlogo.png" />-->
+                        <Image url="C:\Users\user\NTStock\src\main\resources\Image\ntlogo.png" />
                     </image>
                 </ImageView>
             </children>
