@@ -17,7 +17,7 @@ public class SignIn extends Application {
         stage.show();
 
         // shahin branch
-        // merge..update
+        // merge..
     }
 
     public static void main(String[] args) {
