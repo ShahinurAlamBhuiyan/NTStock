@@ -16,7 +16,7 @@ public class SignIn extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    // merge with
+    // merge with main
 
     public static void main(String[] args) {
         launch();
