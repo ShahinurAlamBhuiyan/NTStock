@@ -4,4 +4,7 @@ module com.example.ntstock {
 
     opens SignIn to javafx.fxml;
     exports SignIn;
+
+    opens SignUp to javafx.fxml;
+    exports SignUp;
 }
