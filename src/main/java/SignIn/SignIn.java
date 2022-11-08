@@ -12,7 +12,7 @@ public class SignIn extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SignIn.class.getResource("sign-in.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Sign-in");
+        stage.setTitle("NTStock");
         stage.setScene(scene);
         stage.show();
     }
