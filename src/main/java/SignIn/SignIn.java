@@ -15,9 +15,6 @@ public class SignIn extends Application {
         stage.setTitle("Sign-in");
         stage.setScene(scene);
         stage.show();
-
-        // shahin branch
-        // merge..
     }
 
     public static void main(String[] args) {
