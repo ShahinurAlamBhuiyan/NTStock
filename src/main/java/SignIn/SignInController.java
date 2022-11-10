@@ -68,6 +68,8 @@ public class SignInController {
                 if(!passwordTF.getText().equals("")){
 
                     try{
+                        boolean isMatch = false;
+                        String userType = null;
                         File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
                         Scanner fileReader = new Scanner(file);
 
@@ -78,30 +80,32 @@ public class SignInController {
 
                         for(UserInformation user : usersInfo){
                             if(user.getEmail().equals(userEmailTF.getText()) && user.getPassword().equals(passwordTF.getText()) && user.getRole().equals(role)){
-                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                                alert.setTitle("Congratulations!");
-                                alert.setContentText("Successfully logged in.");
-                                alert.showAndWait();
-                                if(user.getRole().equals("Customer")){
-                                    System.out.println("Goto the Customer");
-                                    switchToCustomerDashboard(event);
-                                }else if(user.getRole().equals("Retailer")){
-                                    System.out.println("goto the Retailer");
-                                    switchToRetailerDashboard(event);
-                                }else if(user.getRole().equals("Dealer")){
-                                    System.out.println("goto the Dealer");
-                                    switchToDealerDashboard(event);
-                                }else if(user.getRole().equals("Administrator")){
-                                    System.out.println("goto the Administrator");
-                                    switchToAdministratorDashboard(event);
-                                }
+                                isMatch = true;
+                                userType = user.getRole();
+                                break;
                             }else{
                                 System.out.println("Not Sign up");
-                                Alert alert = new Alert(Alert.AlertType.WARNING);
-                                alert.setTitle("Wrong!");
-                                alert.setContentText("Please, check your email and password and role.");
-                                alert.showAndWait();
                             }
+                        }
+                        if(isMatch){
+                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                            alert.setTitle("Congratulations!");
+                            alert.setContentText("Successfully logged in.");
+                            alert.showAndWait();
+                            if(userType.equals("Customer")){
+                                switchToCustomerDashboard(event);
+                            }else if(userType.equals("Retailer")){
+                                switchToRetailerDashboard(event);
+                            }else if(userType.equals("Dealer")){
+                                switchToDealerDashboard(event);
+                            }else if(userType.equals("Administrator")){
+                                switchToAdministratorDashboard(event);
+                            }
+                        }else{
+                            Alert alert = new Alert(Alert.AlertType.WARNING);
+                            alert.setTitle("Wrong!");
+                            alert.setContentText("Please, check your email and password and role.");
+                            alert.showAndWait();
                         }
 
                     }catch (Exception err){
