@@ -78,9 +78,29 @@ public class SignInController {
 
                         for(UserInformation user : usersInfo){
                             if(user.getEmail().equals(userEmailTF.getText()) && user.getPassword().equals(passwordTF.getText()) && user.getRole().equals(role)){
-                                System.out.println("login successfully");
+                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                                alert.setTitle("Congratulations!");
+                                alert.setContentText("Successfully logged in.");
+                                alert.showAndWait();
+                                if(user.getRole().equals("Customer")){
+                                    System.out.println("Goto the Customer");
+                                    switchToCustomerDashboard(event);
+                                }else if(user.getRole().equals("Retailer")){
+                                    System.out.println("goto the Retailer");
+                                    switchToRetailerDashboard(event);
+                                }else if(user.getRole().equals("Dealer")){
+                                    System.out.println("goto the Dealer");
+                                    switchToDealerDashboard(event);
+                                }else if(user.getRole().equals("Administrator")){
+                                    System.out.println("goto the Administrator");
+                                    switchToAdministratorDashboard(event);
+                                }
                             }else{
                                 System.out.println("Not Sign up");
+                                Alert alert = new Alert(Alert.AlertType.WARNING);
+                                alert.setTitle("Wrong!");
+                                alert.setContentText("Please, check your email and password and role.");
+                                alert.showAndWait();
                             }
                         }
 
@@ -106,8 +126,40 @@ public class SignInController {
         FXMLScene scene = FXMLScene.load("sign-up.fxml");
         Parent root = scene.root;
 
-        Stage loginStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
-        loginStage.setScene(new Scene(root));
+        Stage signupStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        signupStage.setScene(new Scene(root));
+    }
+
+    void switchToCustomerDashboard(ActionEvent event) throws IOException {
+        FXMLScene scene = FXMLScene.load("customer-dashboard.fxml");
+        Parent root = scene.root;
+
+        Stage customerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        customerStage.setScene(new Scene(root));
+    }
+
+    void switchToRetailerDashboard(ActionEvent event) throws IOException {
+        FXMLScene scene = FXMLScene.load("retailer-dashboard.fxml");
+        Parent root = scene.root;
+
+        Stage retailerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        retailerStage.setScene(new Scene(root));
+    }
+
+    void switchToDealerDashboard(ActionEvent event) throws IOException {
+        FXMLScene scene = FXMLScene.load("dealer-dashboard.fxml");
+        Parent root = scene.root;
+
+        Stage dealerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        dealerStage.setScene(new Scene(root));
+    }
+
+    void switchToAdministratorDashboard(ActionEvent event) throws IOException {
+        FXMLScene scene = FXMLScene.load("administrator-dashboard.fxml");
+        Parent root = scene.root;
+
+        Stage administratorStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        administratorStage.setScene(new Scene(root));
     }
     // merge
 }

@@ -111,8 +111,17 @@ public class SignUpController implements Initializable {
                                             writer1.close();
                                             writer2.close();
                                             System.out.println("Add successfully");
+                                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                                            alert.setTitle("Congratulations!");
+                                            alert.setContentText("Your account created successfully. Sign-in now!");
+                                            alert.showAndWait();
+                                            switchToSignIn(event);
                                         }catch (Exception e){
                                             System.out.println("not added");
+                                            Alert alert = new Alert(Alert.AlertType.WARNING);
+                                            alert.setTitle("Wrong!");
+                                            alert.setContentText("Please, check your email and password and role.");
+                                            alert.showAndWait();
                                         }
 
 
