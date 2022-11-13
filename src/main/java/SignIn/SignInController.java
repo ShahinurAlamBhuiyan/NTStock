@@ -101,6 +101,7 @@ public class SignInController {
                             }else if(userType.equals("Administrator")){
                                 switchToAdministratorDashboard(event);
                             }
+//                            switchToDashboard(event);
                         }else{
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Wrong!");
@@ -132,6 +133,14 @@ public class SignInController {
 
         Stage signupStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
         signupStage.setScene(new Scene(root));
+    }
+
+    void switchToDashboard(ActionEvent event) throws IOException {
+        FXMLScene scene = FXMLScene.load("administrator-dashboard.fxml");
+        Parent root = scene.root;
+
+        Stage customerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
+        customerStage.setScene(new Scene(root));
     }
 
     void switchToCustomerDashboard(ActionEvent event) throws IOException {
