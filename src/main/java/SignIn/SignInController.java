@@ -165,5 +165,5 @@ public class SignInController {
         Stage administratorStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
         administratorStage.setScene(new Scene(root));
     }
-    // merge shahin
+    // merge shahinn
 }
