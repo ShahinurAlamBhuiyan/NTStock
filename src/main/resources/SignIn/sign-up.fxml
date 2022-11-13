@@ -3,9 +3,9 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -19,54 +19,34 @@
     <children>
         <Pane prefHeight="670.0" prefWidth="620.0" style="-fx-background-color: #191919;">
             <children>
-                <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="161.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="153.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Image/ntlogo.png" />
                     </image>
                 </ImageView>
-                <TextField layoutX="116.0" layoutY="177.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
+                <TextField fx:id="fullNameTField" layoutX="116.0" layoutY="177.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <DatePicker layoutX="117.0" layoutY="353.0" prefHeight="27.0" prefWidth="170.0" promptText="Date of birth" />
-                <MenuButton layoutX="361.0" layoutY="353.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Gender">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Male" />
-                        <MenuItem mnemonicParsing="false" text="Female" />
-                    </items>
-                    <font>
-                        <Font name="Arial Bold" size="12.0" />
-                    </font>
-                </MenuButton>
-                <CheckBox layoutX="116.0" layoutY="443.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="270.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
+                <DatePicker fx:id="dobTField" layoutX="162.0" layoutY="353.0" prefHeight="27.0" prefWidth="130.0" promptText="Date of birth" />
+                <CheckBox fx:id="termsCheckBox" layoutX="116.0" layoutY="443.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="270.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </CheckBox>
-                <TextField layoutX="116.0" layoutY="235.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email">
+                <TextField fx:id="emailTField" layoutX="116.0" layoutY="235.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <MenuButton layoutX="361.0" layoutY="394.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Area">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Dhaka" />
-                        <MenuItem mnemonicParsing="false" text="Barishal" />
-                        <MenuItem mnemonicParsing="false" text="Shyllet" />
-                        <MenuItem mnemonicParsing="false" text="Chittagong" />
-                        <MenuItem mnemonicParsing="false" text="Khulna" />
-                        <MenuItem mnemonicParsing="false" text="Rajshahi" />
-                        <MenuItem mnemonicParsing="false" text="Rrangpur" />
-                    </items>
-                    <font>
-                        <Font name="Arial Bold" size="12.0" />
-                    </font>
-                </MenuButton>
-                <Button layoutX="116.0" layoutY="507.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="Sign up now" textFill="WHITE">
+                <Button fx:id="signUpNowBtn" layoutX="116.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="Sign up now" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="18.0" />
                     </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
                 <Text fill="WHITE" layoutX="79.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By joining NT Stock, you are agreed to NT Stock's terms &amp; condition and privecy policys" textAlignment="CENTER">
                     <font>
@@ -78,30 +58,82 @@
                         <Font name="Arial" size="15.0" />
                     </font>
                 </Text>
-                <MenuButton layoutX="117.0" layoutY="394.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="170.0" text="User Type">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Customer" />
-                        <MenuItem mnemonicParsing="false" text="Retailer" />
-                        <MenuItem mnemonicParsing="false" text="Dealer" />
-                        <MenuItem mnemonicParsing="false" text="Adminastrator" />
-                    </items>
-                    <font>
-                        <Font name="Arial Bold" size="12.0" />
-                    </font>
-                </MenuButton>
-            <PasswordField layoutX="116.0" layoutY="292.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
+            <PasswordField fx:id="passwordTField" layoutX="116.0" layoutY="292.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
-               <cursor>
-                  <Cursor fx:constant="NONE" />
-               </cursor>
             </PasswordField>
             <Button layoutX="301.0" layoutY="548.0" mnemonicParsing="false" onAction="#switchToSignIn" style="-fx-background-color: rgb(24,24,24);" text="Sign-in now." textFill="WHITE" underline="true">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
+            <ChoiceBox fx:id="userTypeChoiceBox" layoutX="162.0" layoutY="396.0" prefHeight="27.0" prefWidth="130.0" />
+            <ChoiceBox fx:id="genderChoiceBox" layoutX="372.0" layoutY="353.0" prefHeight="27.0" prefWidth="130.0" />
+            <ChoiceBox fx:id="areaChoiceBox" layoutX="372.0" layoutY="395.0" prefHeight="27.0" prefWidth="130.0" />
+            <Label layoutX="314.0" layoutY="358.0" text="Gender:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="401.0" text="Areas: " textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="401.0" text="Role:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="359.0" text="DOB:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameRequired" layoutX="119.0" layoutY="213.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailRequired" layoutX="119.0" layoutY="271.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="passRequired" layoutX="119.0" layoutY="335.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="dobRequired" layoutX="162.0" layoutY="380.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="roleRequired" layoutX="162.0" layoutY="423.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="genderRequired" layoutX="372.0" layoutY="380.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="areaRequired" layoutX="372.0" layoutY="423.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="termsRequired" layoutX="386.0" layoutY="441.0" prefHeight="12.0" prefWidth="29.0" text="***" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="22.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
     </children>
