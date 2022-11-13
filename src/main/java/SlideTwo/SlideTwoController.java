@@ -20,7 +20,7 @@ public class SlideTwoController {
         Stage loginStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
         loginStage.setScene(new Scene(root));
     }
-
+    // merge with main
     @FXML
     void handlePrev(ActionEvent event) throws IOException {
         FXMLScene scene = FXMLScene.load("slide-one.fxml");
