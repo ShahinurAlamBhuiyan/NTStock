@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Slides.SlideThree.SlideThreeController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/Gradient-bg2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="380.0" layoutX="52.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/ntlogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="188.0" text="Type of users " textFill="#d4fff2">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="60.0" layoutX="371.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/icons/peoples.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="108.0" layoutY="276.0" prefHeight="215.0" prefWidth="765.0">
+         <children>
+            <Label text="1. Customer" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+            <Label text="2. Retailer" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+            <Label text="3. Dealer" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+            <Label text="4. Administrator" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="114.0" layoutY="520.0" text="We will verify after verification request." textFill="#c63636">
+         <font>
+            <Font name="Arial Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="72.0" layoutY="626.0" mnemonicParsing="false" onAction="#handlePrev" prefHeight="41.0" prefWidth="139.0" style="-fx-background-color: green;" text=" Previous" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="246.0" layoutY="626.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: green;" text="Next  " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/right-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="983.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleSkipSignUp" prefHeight="41.0" prefWidth="224.0" style="-fx-background-color: green;" text="Skip all &amp; Sign up" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/login.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Slides.SlideTwo.SlideTwoController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/Gradient-bg2.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="380.0" layoutX="42.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/ntlogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="173.0" text="Major features of NTStock" textFill="#d4fff2">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <VBox layoutX="98.0" layoutY="258.0" prefHeight="215.0" prefWidth="765.0">
+         <children>
+            <Label text="1.  Tracked stocker's" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label text="2.  Administrator can monitor product's condition" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label text="3.  Retailer can tracked sold products." textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label text="4.  Chatting system Retailer - Administrator." textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label text="5.  View shop products" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="63.0" layoutY="631.0" mnemonicParsing="false" onAction="#handlePrev" prefHeight="41.0" prefWidth="139.0" style="-fx-background-color: green;" text=" Previous" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="237.0" layoutY="631.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: green;" text="Next  " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/right-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="974.0" layoutY="630.0" mnemonicParsing="false" onAction="#handleSkipSignUp" prefHeight="41.0" prefWidth="224.0" style="-fx-background-color: green;" text="Skip all &amp; Sign up" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/icons/login.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
