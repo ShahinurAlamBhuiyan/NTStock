@@ -3,3 +3,5 @@ nafisDealer@gmail.com nafisDealer Dealer nafisDealer Male 2022-11-11 Chittagong 
 jack@gmail.com jack12 Customer jack Male 2022-11-09 Dhaka 2022-11-11
 shahinR@gmail.com shahin12 Retailer shahinR Male 2022-11-10 Dhaka 2022-11-11
 RaihanCus@gmail.com raihan12 Customer RaihanCus Male 2022-11-10 Feni 2022-11-13
+sabbirCus@gmail.com sabbir Customer SabbirCus Others 2022-11-16 Dhaka 2022-11-14
+johnCus@gmail.com john12 Customer johnCus Male 2022-11-09 Dhaka 2022-11-14

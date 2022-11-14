@@ -200,6 +200,8 @@ public class SignUpController implements Initializable {
 
         Stage loginStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
         loginStage.setScene(new Scene(root));
+
+
     }
 
     @Override
