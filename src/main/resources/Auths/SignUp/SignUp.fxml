@@ -21,7 +21,7 @@
             <children>
                 <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="153.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../Image/ntlogo.png" />
+                        <Image url="@../../Image/ntlogo.png" />
                     </image>
                 </ImageView>
                 <TextField fx:id="fullNameTField" layoutX="116.0" layoutY="177.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
