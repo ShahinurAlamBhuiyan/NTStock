@@ -19,13 +19,6 @@ public class SlideOne extends Application {
     }
     // merge with
 
-    //sdfghjk
-    //sdfghjk
-    //mm
-
-    //sdfghjk
-    //sdfghjk
-    //mm
 
     public static void main(String[] args) {
         launch();
