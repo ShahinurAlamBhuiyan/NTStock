@@ -37,8 +37,6 @@ module com.example.ntstock {
     exports CustomAlertBox;
 
 
-    opens CustomAlertBox to javafx.fxml;
-    exports CustomAlertBox;
 
 
 }
