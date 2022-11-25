@@ -33,4 +33,8 @@ module com.example.ntstock {
     opens Slides.SlideFour to javafx.fxml;
     exports Slides.SlideFour;
 
+    opens CustomAlertBox to javafx.fxml;
+    exports CustomAlertBox;
+
+
 }
