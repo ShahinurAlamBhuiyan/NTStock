@@ -2,7 +2,11 @@ package Auths.SignIn;
 
 
 import Dashboards.AdministratorDashboard.AdministratorDashboardController;
+import Dashboards.CustomerDashboard.CustomerDashboard;
+
 import Dashboards.CustomerDashboard.CustomerDashboardController;
+import Dashboards.Dashboards;
+import Dashboards.DashboardsController;
 import Dashboards.DealerDashboard.DealerDashboardController;
 import Dashboards.RetailerDashboard.RetailerDashboardController;
 import Auths.SignUp.SignUpController;
@@ -90,15 +94,16 @@ public class SignInController {
                             alert.setTitle("Congratulations!");
                             alert.setContentText("Successfully logged in.");
                             alert.showAndWait();
-                            if(userType.equals("Customer")){
-                                switchToCustomerDashboard(event);
-                            }else if(userType.equals("Retailer")){
-                                switchToRetailerDashboard(event);
-                            }else if(userType.equals("Dealer")){
-                                switchToDealerDashboard(event);
-                            }else if(userType.equals("Administrator")){
-                                switchToAdministratorDashboard(event);
-                            }
+                            switchToDashboard(event);
+//                            if(userType.equals("Customer")){
+//                                switchToDashboard(event);
+//                            }else if(userType.equals("Retailer")){
+//                                switchToRetailerDashboard(event);
+//                            }else if(userType.equals("Dealer")){
+//                                switchToDealerDashboard(event);
+//                            }else if(userType.equals("Administrator")){
+//                                switchToAdministratorDashboard(event);
+//                            }
                         }else{
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Wrong!");
@@ -107,7 +112,7 @@ public class SignInController {
                         }
 
                     }catch (Exception err){
-                        System.out.println(err);
+                        System.out.println(err + ": [error]from signInController");
                     }
                 }else{
                     System.out.println(passwordTF);
@@ -139,16 +144,26 @@ public class SignInController {
     }
 
     void switchToDashboard(ActionEvent event) throws IOException {
-        FXMLScene scene = FXMLScene.load("AdministratorDashboard.fxml");
-        Parent root = scene.root;
+        try {
+            FXMLScene scene = FXMLScene.load("/Dashboards/Dashboards.fxml");
+            Parent root = scene.root;
+            DashboardsController dashboardsController = (DashboardsController) scene.controller;
 
-        Stage customerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
-        customerStage.setScene(new Scene(root));
+            // sending data for dashboard. --------------------------------
+
+            dashboardsController.setTxt_uEmail(customerToggle.getText(),userEmailTF.getText(), passwordTF.getText());
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("E$rror: " + e.getMessage());
+        }
     }
 
     void switchToCustomerDashboard(ActionEvent event) throws IOException {
         try {
-            root = FXMLLoader.load(CustomerDashboardController.class.getResource("CustomerDashboard.fxml"));
+            root = FXMLLoader.load(CustomerDashboardController.class.getResource("CustomerController.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

@@ -8,6 +8,8 @@ module com.example.ntstock {
     opens Auths.SignUp to javafx.fxml;
     exports Auths.SignUp;
 
+    opens Dashboards to javafx.fxml;
+    exports Dashboards;
 
     opens Dashboards.CustomerDashboard to javafx.fxml;
     exports Dashboards.CustomerDashboard;
