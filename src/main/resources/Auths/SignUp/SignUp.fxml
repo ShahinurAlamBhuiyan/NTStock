@@ -15,55 +15,62 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Auths.SignUp.SignUpController">
-    <children>
-        <Pane prefHeight="670.0" prefWidth="620.0" style="-fx-background-color: #191919;">
-            <children>
-                <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="153.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../Image/ntlogo.png" />
-                    </image>
-                </ImageView>
-                <TextField fx:id="fullNameTField" layoutX="116.0" layoutY="177.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
-                    <font>
-                        <Font name="Arial Bold" size="15.0" />
-                    </font>
-                </TextField>
-                <DatePicker fx:id="dobTField" layoutX="162.0" layoutY="353.0" prefHeight="27.0" prefWidth="130.0" promptText="Date of birth" />
-                <CheckBox fx:id="termsCheckBox" layoutX="116.0" layoutY="443.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="270.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
-                    <font>
-                        <Font name="Arial Bold" size="15.0" />
-                    </font>
-                </CheckBox>
-                <TextField fx:id="emailTField" layoutX="116.0" layoutY="235.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email">
-                    <font>
-                        <Font name="Arial Bold" size="15.0" />
-                    </font>
-                </TextField>
-                <Button fx:id="signUpNowBtn" layoutX="116.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="Sign up now" textFill="WHITE">
-                    <font>
-                        <Font name="Arial Bold" size="18.0" />
-                    </font>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Auths.SignUp.SignUpController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="1250.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="700.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Gradient-bg2.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="696.0" layoutY="76.0" mnemonicParsing="false" opacity="0.26" prefHeight="548.0" prefWidth="501.0" style="-fx-background-color: #2FD856; -fx-background-radius: 25;" />
+            <ImageView fitHeight="197.0" fitWidth="463.0" layoutX="94.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/ntlogo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fullNameTField" layoutX="752.0" layoutY="199.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dobTField" layoutX="798.0" layoutY="375.0" prefHeight="27.0" prefWidth="130.0" promptText="Date of birth" />
+            <CheckBox fx:id="termsCheckBox" layoutX="752.0" layoutY="465.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="270.0" text="Agreed with terms &amp; conditions?" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="emailTField" layoutX="752.0" layoutY="257.0" prefHeight="36.0" prefWidth="386.0" promptText="  Email">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="signUpNowBtn" layoutX="752.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="Sign up now" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-                </Button>
-                <Text fill="WHITE" layoutX="79.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By joining NT Stock, you are agreed to NT Stock's terms &amp; condition and privecy policys" textAlignment="CENTER">
-                    <font>
-                        <Font name="Arial Bold" size="11.0" />
-                    </font>
-                </Text>
-                <Text fill="WHITE" layoutX="119.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" textAlignment="CENTER">
-                    <font>
-                        <Font name="Arial" size="15.0" />
-                    </font>
-                </Text>
-            <PasswordField fx:id="passwordTField" layoutX="116.0" layoutY="292.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
+            </Button>
+            <Text fill="WHITE" layoutX="715.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By joining NT Stock, you are agreed to NT Stock's terms &amp; condition and privecy policys" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="755.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="passwordTField" layoutX="752.0" layoutY="314.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </PasswordField>
-            <Button layoutX="301.0" layoutY="548.0" mnemonicParsing="false" onAction="#switchToSignIn" style="-fx-background-color: rgb(24,24,24);" text="Sign-in now." textFill="WHITE" underline="true">
+            <Button layoutX="937.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToSignIn" style="-fx-background-color: transparent;" text="sign-in now." textFill="WHITE" underline="true">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -71,70 +78,89 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ChoiceBox fx:id="userTypeChoiceBox" layoutX="162.0" layoutY="396.0" prefHeight="27.0" prefWidth="130.0" />
-            <ChoiceBox fx:id="genderChoiceBox" layoutX="372.0" layoutY="353.0" prefHeight="27.0" prefWidth="130.0" />
-            <ChoiceBox fx:id="areaChoiceBox" layoutX="372.0" layoutY="395.0" prefHeight="27.0" prefWidth="130.0" />
-            <Label layoutX="314.0" layoutY="358.0" text="Gender:" textFill="WHITE">
+            <ChoiceBox fx:id="userTypeChoiceBox" layoutX="798.0" layoutY="418.0" prefHeight="27.0" prefWidth="130.0" />
+            <ChoiceBox fx:id="genderChoiceBox" layoutX="1008.0" layoutY="375.0" prefHeight="27.0" prefWidth="130.0" />
+            <Label layoutX="950.0" layoutY="380.0" text="Gender:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="325.0" layoutY="401.0" text="Areas: " textFill="WHITE">
+            <Label layoutX="755.0" layoutY="423.0" text="Role:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="119.0" layoutY="401.0" text="Role:" textFill="WHITE">
+            <Label layoutX="755.0" layoutY="381.0" text="DOB:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="119.0" layoutY="359.0" text="DOB:" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="nameRequired" layoutX="119.0" layoutY="213.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="nameRequired" layoutX="755.0" layoutY="235.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="emailRequired" layoutX="119.0" layoutY="271.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="emailRequired" layoutX="755.0" layoutY="293.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="passRequired" layoutX="119.0" layoutY="335.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="passRequired" layoutX="755.0" layoutY="357.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="dobRequired" layoutX="162.0" layoutY="380.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="dobRequired" layoutX="798.0" layoutY="402.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="roleRequired" layoutX="162.0" layoutY="423.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="roleRequired" layoutX="798.0" layoutY="445.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="genderRequired" layoutX="372.0" layoutY="380.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="genderRequired" layoutX="1008.0" layoutY="402.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="areaRequired" layoutX="372.0" layoutY="423.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="areaRequired" layoutX="1008.0" layoutY="445.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="termsRequired" layoutX="386.0" layoutY="441.0" prefHeight="12.0" prefWidth="29.0" text="***" textFill="#d32626" visible="false">
+            <Label fx:id="termsRequired" layoutX="1022.0" layoutY="463.0" prefHeight="12.0" prefWidth="29.0" text="***" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="22.0" />
                </font>
             </Label>
-            </children>
-        </Pane>
-    </children>
+            <Label layoutX="752.0" layoutY="109.0" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="289.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="408.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="447.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="336.0" prefHeight="31.0" prefWidth="559.0" text="and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
