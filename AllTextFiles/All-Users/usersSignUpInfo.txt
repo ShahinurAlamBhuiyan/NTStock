@@ -1,8 +1,4 @@
-1 1 Customer testShahinCus Male 2022-11-01 Dhaka 2022-11-26
-shahinAd@gmail.com shahin Administrator shahinAd Male 2022-11-11 Dhaka 2022-11-11
-nafisDealer@gmail.com nafisDealer Dealer nafisDealer Male 2022-11-11 Chittagong 2022-11-11
-jack@gmail.com jack12 Customer jack Male 2022-11-09 Dhaka 2022-11-11
-shahinR@gmail.com shahin12 Retailer shahinR Male 2022-11-10 Dhaka 2022-11-11
-RaihanCus@gmail.com raihan12 Customer RaihanCus Male 2022-11-10 Feni 2022-11-13
-nusrat@gmail.com nusrat Administrator Nusrat Female 2022-11-15 Dhaka 2022-11-15
-testShahinCus@gmail.com testShahinCus Customer testShahinCus Male 2022-11-01 Dhaka 2022-11-26
+testCus testCus Customer testCus Male 2022-11-10 Dhaka 2022-11-27 71
+cus cus Customer cus Male 2022-11-15 Dhaka 2022-11-27 26
+aaa aaa Dealer aaa Male 2022-11-09 Dhaka 2022-11-27 76
+shahinRetailer@gmail.com shahinRetailer Retailer ShahinBhuiyan Male 2022-11-09 Dhaka 2022-11-27 61

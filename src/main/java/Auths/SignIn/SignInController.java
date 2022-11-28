@@ -50,9 +50,10 @@ public class SignInController {
     private Label roleRequired;
 
 
+    public String role=null;
+    public String userRandomId=null;
     @FXML
     void handleSignIn(ActionEvent event) {
-        String role;
         if(customerToggle.isSelected()){
             role = customerToggle.getText();
         }else if(retailerToggle.isSelected()){
@@ -71,19 +72,18 @@ public class SignInController {
                 if(!passwordTF.getText().equals("")){
                     try{
                         boolean isMatch = false;
-                        String userType = null;
                         File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
                         Scanner fileReader = new Scanner(file);
 
                         while(fileReader.hasNext())
                         {
-                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next()));
                         }
 
                         for(UserInformation user : usersInfo){
                             if(user.getEmail().equals(userEmailTF.getText()) && user.getPassword().equals(passwordTF.getText()) && user.getRole().equals(role)){
                                 isMatch = true;
-                                userType = user.getRole();
+                                userRandomId = user.getUserRandomId();
                                 break;
                             }else{
                                 System.out.println("Not Sign up");
@@ -95,15 +95,6 @@ public class SignInController {
                             alert.setContentText("Successfully logged in.");
                             alert.showAndWait();
                             switchToDashboard(event);
-//                            if(userType.equals("Customer")){
-//                                switchToDashboard(event);
-//                            }else if(userType.equals("Retailer")){
-//                                switchToRetailerDashboard(event);
-//                            }else if(userType.equals("Dealer")){
-//                                switchToDealerDashboard(event);
-//                            }else if(userType.equals("Administrator")){
-//                                switchToAdministratorDashboard(event);
-//                            }
                         }else{
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Wrong!");
@@ -112,7 +103,7 @@ public class SignInController {
                         }
 
                     }catch (Exception err){
-                        System.out.println(err + ": [error]from signInController");
+                        err.printStackTrace();
                     }
                 }else{
                     System.out.println(passwordTF);
@@ -147,17 +138,15 @@ public class SignInController {
         try {
             FXMLScene scene = FXMLScene.load("/Dashboards/Dashboards.fxml");
             Parent root = scene.root;
-            DashboardsController dashboardsController = (DashboardsController) scene.controller;
-
             // sending data for dashboard. --------------------------------
-
-            dashboardsController.setTxt_uEmail(customerToggle.getText(),userEmailTF.getText(), passwordTF.getText());
+            DashboardsController dashboardsController = (DashboardsController) scene.controller;
+            dashboardsController.getSignedUserInfo(role,userEmailTF.getText(), userRandomId);
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("NTStock");
             stage.show();
         } catch (Exception e) {
-            System.out.println("E$rror: " + e.getMessage());
+            System.out.println("$Error: " + e.getMessage());
         }
     }
 

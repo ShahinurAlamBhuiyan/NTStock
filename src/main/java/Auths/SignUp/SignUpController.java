@@ -89,22 +89,22 @@ public class SignUpController implements Initializable {
                                 if(!(areaChoiceBox.getValue()==null)){
                                     if(termsCheckBox.isSelected()){
                                         System.out.println("Success");
-
-                                        String singleUserFilePath = "AllTextFiles/"+userTypeChoiceBox.getValue()+"s/"+emailTField.getText()+""+userTypeChoiceBox.getValue()+""+generateRandomNumber()+".txt";
-                                        String signUpAllUserPath = "AllTextFiles/All-Users/usersSignUpInfo.txt";
+                                        int fileRandomValue = generateRandomNumber();
+                                        String singleUserFilePath = "AllTextFiles/"+userTypeChoiceBox.getValue()+"s/"+emailTField.getText()+""+userTypeChoiceBox.getValue()+""+fileRandomValue+".txt";
+                                        String AllUserPath = "AllTextFiles/All-Users/usersSignUpInfo.txt";
 
                                         try{
                                             FileWriter writer1 = new FileWriter(singleUserFilePath, true);
                                             writer1.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                    userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
                                                     genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " +
-                                                    areaChoiceBox.getValue() +" " + LocalDate.now() +"\n");
+                                                    areaChoiceBox.getValue() +" " + LocalDate.now() +" "+fileRandomValue+"\n");
 
-                                            FileWriter writer2 = new FileWriter(signUpAllUserPath, true);
+                                            FileWriter writer2 = new FileWriter(AllUserPath, true);
                                             writer2.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
                                                     genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " +
-                                                    areaChoiceBox.getValue() +" " + LocalDate.now() +"\n");
+                                                    areaChoiceBox.getValue() +" " + LocalDate.now() + " "+fileRandomValue+ "\n");
                                             writer1.close();
                                             writer2.close();
                                             System.out.println("Add successfully");
