@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="121.0" fitWidth="296.0" layoutX="162.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Users\user\NTStock\src\main\resources\Image\ntlogo.png" />
+                  <Image url="@../../Image/ntlogo.png" />
                </image>
             </ImageView>
             <TextField layoutX="117.0" layoutY="149.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name" style="-fx-background-radius: 18 18 18 18;">
@@ -104,12 +104,12 @@
             </Button>
             <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="156.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Users\user\NTStock\src\main\resources\Image\Google__G__Logo.svg.png" />
+                  <Image url="@../../Image/Google__G__Logo.svg.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="36.0" fitWidth="56.0" layoutX="134.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Users\user\NTStock\src\main\resources\Image\Facebook-logo.png" />
+                  <Image url="@../../Image/Facebook-logo.png" />
                </image>
             </ImageView>
          </children>

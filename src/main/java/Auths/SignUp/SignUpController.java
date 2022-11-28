@@ -174,8 +174,5 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        userTypeChoiceBox.getItems().addAll(users);
-        areaChoiceBox.getItems().addAll(areas);
-        genderChoiceBox.getItems().addAll(genders);
     }
 }
