@@ -3,7 +3,8 @@ package Dashboards;
 
 import Auths.SignIn.SignInController;
 import Auths.SignIn.UserInformation;
-import Auths.SignUp.SignUpController;
+
+import Dashboards.CustomerDashboardInfo.CustomerDashboardInfoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -36,7 +39,8 @@ public class DashboardsController {
     @FXML
     private Button chatBtn;
 
-
+    @FXML
+    private BorderPane MainBorderPane;
 
     @FXML
     void handleLogout(ActionEvent event) {
@@ -57,11 +61,26 @@ public class DashboardsController {
 //        setBackground("-fx-background-color: blue");
     }
 
+    @FXML
+    void handleHomeSideBtn(ActionEvent event) {
+        System.out.println("Clicked");
+        try {
+            // FXMLLoader o = new FXMLLoader(Profile.ProfileController.class.getResource("Profile.fxml"));
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboardInfo/CustomerDashboardInfo.fxml"));
+            MainBorderPane.setCenter(p);
+            stage.setTitle("NTStock");
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void getSignedUserInfo(String role, String uEmail, String uRandomID) {
         handleUser(role, uEmail, uRandomID);
         UserTypeLebel.setText(role);
-        welcomeLebel.setText("Welcome " + role);
+        welcomeLebel.setText("Welcome to " + role + " Dashboard.");
 
     }
 
@@ -84,4 +103,7 @@ public class DashboardsController {
             System.out.println("$Error: " + e.getMessage());
         }
     }
+
+
+
 }

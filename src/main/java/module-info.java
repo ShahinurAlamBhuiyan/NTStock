@@ -11,6 +11,8 @@ module com.example.ntstock {
     opens Dashboards to javafx.fxml;
     exports Dashboards;
 
+
+
     opens Dashboards.CustomerDashboard to javafx.fxml;
     exports Dashboards.CustomerDashboard;
 
@@ -37,5 +39,9 @@ module com.example.ntstock {
 
     opens CustomAlertBox to javafx.fxml;
     exports CustomAlertBox;
+
+    opens Dashboards.CustomerDashboardInfo to javafx.fxml;
+    exports Dashboards.CustomerDashboardInfo;
+
 
 }
