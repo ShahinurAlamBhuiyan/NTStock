@@ -8,19 +8,17 @@ public class UserInformation {
     private String gender;
 
     private String birthday;
-    private String area;
     private String creatingTime;
     private String userRandomId;
 
 
-    public UserInformation(String email, String password, String role, String username, String gender, String birthday, String area, String creatingTime, String userRandomId) {
+    public UserInformation(String email, String password, String role, String username, String gender, String birthday,  String creatingTime, String userRandomId) {
         this.email = email;
         this.password = password;
         this.role = role;
         this.username = username;
         this.gender = gender;
         this.birthday = birthday;
-        this.area = area;
         this.creatingTime = creatingTime;
         this.userRandomId = userRandomId;
     }
@@ -83,14 +81,6 @@ public class UserInformation {
 
     public void setCreatingTime(String creatingTime) {
         this.creatingTime = creatingTime;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
     }
 
 

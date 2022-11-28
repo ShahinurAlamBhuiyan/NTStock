@@ -40,8 +40,7 @@ public class SignUpController implements Initializable {
     @FXML
     private ChoiceBox<String> userTypeChoiceBox;
     private String[] users = {"Customer", "Retailer", "Dealer", "Administrator"};
-    @FXML
-    private ChoiceBox<String> areaChoiceBox;
+
     private String[] areas = {"Dhaka", "Chittagong", "Feni", "Rajshahi", "Barishal", "Shyllet", "Khulna","Noakhali"};
     @FXML
     private ChoiceBox<String> genderChoiceBox;
@@ -86,7 +85,7 @@ public class SignUpController implements Initializable {
                     if(!(dobTField.getValue() == null)){
                         if(!(genderChoiceBox.getValue()==null)){
                             if(!(userTypeChoiceBox.getValue()==null)){
-                                if(!(areaChoiceBox.getValue()==null)){
+//                                if(!(areaChoiceBox.getValue()==null)){
                                     if(termsCheckBox.isSelected()){
                                         System.out.println("Success");
                                         int fileRandomValue = generateRandomNumber();
@@ -96,15 +95,13 @@ public class SignUpController implements Initializable {
                                         try{
                                             FileWriter writer1 = new FileWriter(singleUserFilePath, true);
                                             writer1.write(emailTField.getText() + " " + passwordTField.getText() + " " +
-                                                   userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " +
-                                                    areaChoiceBox.getValue() +" " + LocalDate.now() +" "+fileRandomValue+"\n");
+                                                    userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+"\n");
 
                                             FileWriter writer2 = new FileWriter(AllUserPath, true);
                                             writer2.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " +
-                                                    areaChoiceBox.getValue() +" " + LocalDate.now() + " "+fileRandomValue+ "\n");
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+ "\n");
                                             writer1.close();
                                             writer2.close();
                                             System.out.println("Add successfully");
@@ -127,10 +124,8 @@ public class SignUpController implements Initializable {
                                     }else{
                                         termsRequired.setVisible(true);
                                     }
-                                    areaRequired.setVisible(false);
-                                }else{
-                                    areaRequired.setVisible(true);
-                                }
+//                                    areaRequired.setVisible(false);
+//                                }
                                 roleRequired.setVisible(false);
                             }else{
                                 roleRequired.setVisible(true);
@@ -174,5 +169,7 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        userTypeChoiceBox.getItems().addAll(users);
+        genderChoiceBox.getItems().addAll(genders);
     }
 }
