@@ -3,6 +3,7 @@ package Slides.SlideOne;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class SlideOne extends Application {
         stage.setTitle("NTStock");
         stage.setScene(scene);
         stage.show();
+        stage.getIcons().add(new Image("file:icon.png"));
     }
     // merge with shahin
 
