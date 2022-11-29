@@ -124,9 +124,7 @@ public class SignUpController implements Initializable {
                                     }else{
                                         termsRequired.setVisible(true);
                                     }
-//                                    areaRequired.setVisible(false);
-//                                }
-                                roleRequired.setVisible(false);
+                                    roleRequired.setVisible(false);
                             }else{
                                 roleRequired.setVisible(true);
                             }

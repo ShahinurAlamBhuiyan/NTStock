@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.EventObject;
 import java.util.Scanner;
 
 public class DashboardsController {
@@ -41,11 +42,35 @@ public class DashboardsController {
     @FXML
     private BorderPane MainBorderPane;
 
+    public DashboardsController() {
+    }
+
+    public void handleSidebar(){
+//        System.out.println(UserTypeLebel.getText());
+
+            System.out.println("from handleSidebar");
+            try {
+                if(UserTypeLebel.getText().equals("Dealer")) {
+                    Pane p = FXMLLoader.load(getClass().getResource("/Sidebars/DealerSidebar/DealerSidebar.fxml"));
+                    MainBorderPane.setLeft(p);
+                }else if(UserTypeLebel.getText().equals("Administrator")) {
+                    Pane p = FXMLLoader.load(getClass().getResource("/Sidebars/AdministratorSidebar/AdministratorSidebar.fxml"));
+                    MainBorderPane.setLeft(p);
+                }else if(UserTypeLebel.getText().equals("Retailer")) {
+                    Pane p = FXMLLoader.load(getClass().getResource("/Sidebars/RetailerSidebar/RetailerSidebar.fxml"));
+                    MainBorderPane.setLeft(p);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
+
     @FXML
     void handleLogout(ActionEvent event) {
         try {
             root = FXMLLoader.load(SignInController.class.getResource("SignIn.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            System.out.println(event);
             scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("NTStock");
@@ -62,9 +87,7 @@ public class DashboardsController {
 
     @FXML
     void handleHomeSideBtn(ActionEvent event) {
-        System.out.println("Clicked");
         try {
-            // FXMLLoader o = new FXMLLoader(Profile.ProfileController.class.getResource("Profile.fxml"));
             Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboardInfo/CustomerDashboardInfo.fxml"));
             MainBorderPane.setCenter(p);
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -40,8 +40,16 @@ module com.example.ntstock {
     opens CustomAlertBox to javafx.fxml;
     exports CustomAlertBox;
 
-    opens Dashboards.CustomerDashboardInfo to javafx.fxml;
-    exports Dashboards.CustomerDashboardInfo;
 
+    opens Sidebars.AdministratorSidebar to javafx.fxml;
+    exports Sidebars.AdministratorSidebar;
 
+    opens Sidebars.CustomerSidebar to javafx.fxml;
+    exports Sidebars.CustomerSidebar;
+
+    opens Sidebars.DealerSidebar to javafx.fxml;
+    exports Sidebars.DealerSidebar;
+
+    opens Sidebars.RetailerSidebar to javafx.fxml;
+    exports Sidebars.RetailerSidebar;
 }

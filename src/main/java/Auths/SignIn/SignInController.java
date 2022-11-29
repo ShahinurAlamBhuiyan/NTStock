@@ -139,6 +139,7 @@ public class SignInController {
             // sending data for dashboard. --------------------------------
             DashboardsController dashboardsController = (DashboardsController) scene.controller;
             dashboardsController.getSignedUserInfo(role,userEmailTF.getText(), userRandomId);
+            dashboardsController.handleSidebar();
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("NTStock");
@@ -148,59 +149,6 @@ public class SignInController {
         }
     }
 
-    void switchToCustomerDashboard(ActionEvent event) throws IOException {
-        try {
-            root = FXMLLoader.load(CustomerDashboardController.class.getResource("CustomerController.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("NTStock");
-            stage.show();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
-    void switchToRetailerDashboard(ActionEvent event) throws IOException {
-        try {
-            root = FXMLLoader.load(RetailerDashboardController.class.getResource("RetailerDashboard.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("NTStock");
-            stage.show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    void switchToDealerDashboard(ActionEvent event) throws IOException {
-        try {
-            root = FXMLLoader.load(DealerDashboardController.class.getResource("DealerDashboard.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("NTStock");
-            stage.show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    void switchToAdministratorDashboard(ActionEvent event) throws IOException {
-        try {
-            root = FXMLLoader.load(AdministratorDashboardController.class.getResource("AdministratorDashboard.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("NTStock");
-            stage.show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
