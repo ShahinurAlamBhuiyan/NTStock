@@ -169,7 +169,7 @@
                         </HBox>
                         <HBox alignment="CENTER" layoutX="699.0" prefHeight="100.0" prefWidth="302.0">
                            <children>
-                              <Button alignment="CENTER" disable="true" mnemonicParsing="false" opacity="0.89" prefHeight="62.0" prefWidth="255.0" style="-fx-background-color: \\;" styleClass="sidebar" text="     Search">
+                              <Button alignment="CENTER" disable="true" mnemonicParsing="false" opacity="0.89" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: \\;" styleClass="sidebar" text="     Search">
                                  <font>
                                     <Font name="Arial" size="22.0" />
                                  </font>

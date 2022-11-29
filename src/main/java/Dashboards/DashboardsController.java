@@ -4,7 +4,6 @@ package Dashboards;
 import Auths.SignIn.SignInController;
 import Auths.SignIn.UserInformation;
 
-import Dashboards.CustomerDashboardInfo.CustomerDashboardInfoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -68,8 +67,8 @@ public class DashboardsController {
             // FXMLLoader o = new FXMLLoader(Profile.ProfileController.class.getResource("Profile.fxml"));
             Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboardInfo/CustomerDashboardInfo.fxml"));
             MainBorderPane.setCenter(p);
-            stage.setTitle("NTStock");
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
