@@ -13,26 +13,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Auths.SignIn.SignInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Auths.SignIn.SignInController">
     <children>
-        <Pane prefHeight="670.0" prefWidth="620.0" style="-fx-background-color: #191919;">
+        <Pane prefHeight="700.0" prefWidth="1250.0" style="-fx-background-color: #191919;">
             <children>
-                <TextField fx:id="userEmailTF" layoutX="115.0" layoutY="269.0" prefHeight="42.0" prefWidth="386.0" promptText="Email">
+            <ImageView fitHeight="700.0" fitWidth="1250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Gradient-bg2.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="67.0" layoutY="81.0" mnemonicParsing="false" opacity="0.33" prefHeight="548.0" prefWidth="501.0" style="-fx-background-color: #163B5C; -fx-background-radius: 25;" />
+                <TextField fx:id="userEmailTF" layoutX="124.0" layoutY="254.0" prefHeight="42.0" prefWidth="386.0" promptText="Email">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
                 </TextField>
-                <Button layoutX="115.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="SIGN IN" textFill="WHITE">
+                <Button layoutX="124.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="42.0" prefWidth="386.0" style="-fx-background-color: #27AE60;" text="SIGN IN" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="18.0" />
                     </font>
                 </Button>
-                <Text fill="WHITE" layoutX="247.0" layoutY="604.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?" underline="true">
+                <Text fill="WHITE" layoutX="256.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?" underline="true">
                     <font>
                         <Font name="Arial Bold Italic" size="14.0" />
                     </font>
                 </Text>
-                <ToggleButton fx:id="customerToggle" layoutX="115.0" layoutY="214.0" mnemonicParsing="false" text="Customer">
+                <ToggleButton fx:id="customerToggle" layoutX="124.0" layoutY="199.0" mnemonicParsing="false" text="Customer">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
@@ -40,64 +46,89 @@
                   <ToggleGroup fx:id="roleToggleGrp" />
                </toggleGroup>
                 </ToggleButton>
-            <Label layoutX="115.0" layoutY="483.0" text="Not  have an account?" textFill="#f8f8f8">
+            <Label layoutX="124.0" layoutY="468.0" text="Not  have an account?" textFill="#f8f8f8">
                <font>
-                  <Font name="Arial" size="12.0" />
+                  <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-                <ImageView fitHeight="143.0" fitWidth="405.0" layoutX="128.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="143.0" fitWidth="405.0" layoutX="754.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../Image/ntlogo.png" />
                     </image>
                 </ImageView>
-            <Button alignment="CENTER" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="    Google " textFill="#363636">
+            <Button alignment="CENTER" layoutX="124.0" layoutY="506.0" mnemonicParsing="false" opacity="0.88" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="   Google " textFill="#363636">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="142.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/googleLogo.png" />
-               </image>
-            </ImageView>
-            <Button alignment="CENTER" layoutX="321.0" layoutY="521.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="       Facebook " textFill="#363636">
+            <Button alignment="CENTER" layoutX="330.0" layoutY="506.0" mnemonicParsing="false" opacity="0.88" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #FFFFFF;" text="       Facebook " textFill="#363636">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="339.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="348.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Image/facebook.png" />
                </image>
             </ImageView>
-            <PasswordField fx:id="passwordTF" layoutX="115.0" layoutY="328.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
+            <PasswordField fx:id="passwordTF" layoutX="124.0" layoutY="313.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </PasswordField>
-            <Button layoutX="246.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToSignUp" style="-fx-background-color: rgb(24,24,24); -fx-cursor: hand;" text="Sign up here." textFill="WHITE" underline="true">
+            <ImageView fitHeight="26.0" fitWidth="21.0" layoutX="155.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/googleLogo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="255.0" layoutY="463.0" mnemonicParsing="false" onAction="#switchToSignUp" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up here." textFill="WHITE" underline="true">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <ToggleButton fx:id="retailerToggle" layoutX="218.0" layoutY="213.0" mnemonicParsing="false" text="Retailer" textFill="#000000f7" toggleGroup="$roleToggleGrp">
+            <ToggleButton fx:id="retailerToggle" layoutX="227.0" layoutY="198.0" mnemonicParsing="false" text="Retailer" textFill="#000000f7" toggleGroup="$roleToggleGrp">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </ToggleButton>
-            <ToggleButton fx:id="dealerToggle" layoutX="307.0" layoutY="214.0" mnemonicParsing="false" text="Dealer" toggleGroup="$roleToggleGrp">
+            <ToggleButton fx:id="dealerToggle" layoutX="316.0" layoutY="199.0" mnemonicParsing="false" text="Dealer" toggleGroup="$roleToggleGrp">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </ToggleButton>
-            <ToggleButton fx:id="administratorToggle" layoutX="388.0" layoutY="214.0" mnemonicParsing="false" text="Administrator" toggleGroup="$roleToggleGrp">
+            <ToggleButton fx:id="administratorToggle" layoutX="397.0" layoutY="199.0" mnemonicParsing="false" text="Administrator" toggleGroup="$roleToggleGrp">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </ToggleButton>
-            <Label fx:id="roleRequired" layoutX="116.0" layoutY="239.0" prefHeight="17.0" prefWidth="173.0" text="you must have to select role*" textFill="#d32626" visible="false">
+            <Label fx:id="roleRequired" layoutX="125.0" layoutY="224.0" prefHeight="17.0" prefWidth="173.0" text="you must have to select role*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="124.0" layoutY="114.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="270.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="389.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="428.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="317.0" prefHeight="31.0" prefWidth="559.0" text="and food stocking." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
                </font>
             </Label>
             </children>

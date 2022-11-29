@@ -2,7 +2,9 @@ package Auths.SignIn;
 
 
 import Dashboards.AdministratorDashboard.AdministratorDashboardController;
+
 import Dashboards.CustomerDashboard.CustomerDashboardController;
+import Dashboards.DashboardsController;
 import Dashboards.DealerDashboard.DealerDashboardController;
 import Dashboards.RetailerDashboard.RetailerDashboardController;
 import Auths.SignUp.SignUpController;
@@ -46,9 +48,10 @@ public class SignInController {
     private Label roleRequired;
 
 
+    public String role=null;
+    public String userRandomId=null;
     @FXML
     void handleSignIn(ActionEvent event) {
-        String role;
         if(customerToggle.isSelected()){
             role = customerToggle.getText();
         }else if(retailerToggle.isSelected()){
@@ -67,7 +70,6 @@ public class SignInController {
                 if(!passwordTF.getText().equals("")){
                     try{
                         boolean isMatch = false;
-                        String userType = null;
                         File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
                         Scanner fileReader = new Scanner(file);
 
@@ -79,7 +81,7 @@ public class SignInController {
                         for(UserInformation user : usersInfo){
                             if(user.getEmail().equals(userEmailTF.getText()) && user.getPassword().equals(passwordTF.getText()) && user.getRole().equals(role)){
                                 isMatch = true;
-                                userType = user.getRole();
+                                userRandomId = user.getUserRandomId();
                                 break;
                             }else{
                                 System.out.println("Not Sign up");
@@ -90,15 +92,7 @@ public class SignInController {
                             alert.setTitle("Congratulations!");
                             alert.setContentText("Successfully logged in.");
                             alert.showAndWait();
-                            if(userType.equals("Customer")){
-                                switchToCustomerDashboard(event);
-                            }else if(userType.equals("Retailer")){
-                                switchToRetailerDashboard(event);
-                            }else if(userType.equals("Dealer")){
-                                switchToDealerDashboard(event);
-                            }else if(userType.equals("Administrator")){
-                                switchToAdministratorDashboard(event);
-                            }
+                            switchToDashboard(event);
                         }else{
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Wrong!");
@@ -107,7 +101,7 @@ public class SignInController {
                         }
 
                     }catch (Exception err){
-                        System.out.println(err);
+                        err.printStackTrace();
                     }
                 }else{
                     System.out.println(passwordTF);
@@ -139,16 +133,24 @@ public class SignInController {
     }
 
     void switchToDashboard(ActionEvent event) throws IOException {
-        FXMLScene scene = FXMLScene.load("AdministratorDashboard.fxml");
-        Parent root = scene.root;
-
-        Stage customerStage = (Stage) ((Node) (event.getSource())).getScene().getWindow(); // then cast to stage to get the window
-        customerStage.setScene(new Scene(root));
+        try {
+            FXMLScene scene = FXMLScene.load("/Dashboards/Dashboards.fxml");
+            Parent root = scene.root;
+            // sending data for dashboard. --------------------------------
+            DashboardsController dashboardsController = (DashboardsController) scene.controller;
+            dashboardsController.getSignedUserInfo(role,userEmailTF.getText(), userRandomId);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("$Error: " + e.getMessage());
+        }
     }
 
     void switchToCustomerDashboard(ActionEvent event) throws IOException {
         try {
-            root = FXMLLoader.load(CustomerDashboardController.class.getResource("CustomerDashboard.fxml"));
+            root = FXMLLoader.load(CustomerDashboardController.class.getResource("CustomerController.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
