@@ -4,3 +4,4 @@ jack@gmail.com jack12 Customer jack Male 2022-11-09 Dhaka 2022-11-11
 shahinR@gmail.com shahin12 Retailer shahinR Male 2022-11-10 Dhaka 2022-11-11
 RaihanCus@gmail.com raihan12 Customer RaihanCus Male 2022-11-10 Feni 2022-11-13
 nusrat@gmail.com nusrat Administrator Nusrat Female 2022-11-15 Dhaka 2022-11-15
+shorower 3211 Customer shorower Male 2002-06-22 Chittagong 2022-11-26
