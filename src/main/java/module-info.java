@@ -2,37 +2,54 @@ module com.example.ntstock {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens SignIn to javafx.fxml;
-    exports SignIn;
+    opens Auths.SignIn to javafx.fxml;
+    exports Auths.SignIn;
 
-    opens SignUp to javafx.fxml;
-    exports SignUp;
+    opens Auths.SignUp to javafx.fxml;
+    exports Auths.SignUp;
 
-    opens Dashboard to javafx.fxml;
-    exports Dashboard;
+    opens Dashboards to javafx.fxml;
+    exports Dashboards;
 
-    opens CustomerDashboard to javafx.fxml;
-    exports CustomerDashboard;
 
-    opens RetailerDashboard to javafx.fxml;
-    exports RetailerDashboard;
 
-    opens DealerDashboard to javafx.fxml;
-    exports DealerDashboard;
+    opens Dashboards.CustomerDashboard to javafx.fxml;
+    exports Dashboards.CustomerDashboard;
 
-    opens AdministratorDashboard to javafx.fxml;
-    exports AdministratorDashboard;
+    opens Dashboards.RetailerDashboard to javafx.fxml;
+    exports Dashboards.RetailerDashboard;
 
-    opens SlideOne to javafx.fxml;
-    exports SlideOne;
+    opens Dashboards.DealerDashboard to javafx.fxml;
+    exports Dashboards.DealerDashboard;
 
-    opens SlideTwo to javafx.fxml;
-    exports SlideTwo;
+    opens Dashboards.AdministratorDashboard to javafx.fxml;
+    exports Dashboards.AdministratorDashboard;
 
-    opens SlideThree to javafx.fxml;
-    exports SlideThree;
+    opens Slides.SlideOne to javafx.fxml;
+    exports Slides.SlideOne;
 
-    opens SlideFour to javafx.fxml;
-    exports SlideFour;
+    opens Slides.SlideTwo to javafx.fxml;
+    exports Slides.SlideTwo;
 
+    opens Slides.SlideThree to javafx.fxml;
+    exports Slides.SlideThree;
+
+    opens Slides.SlideFour to javafx.fxml;
+    exports Slides.SlideFour;
+
+    opens CustomAlertBox to javafx.fxml;
+    exports CustomAlertBox;
+
+
+    opens Sidebars.AdministratorSidebar to javafx.fxml;
+    exports Sidebars.AdministratorSidebar;
+
+    opens Sidebars.CustomerSidebar to javafx.fxml;
+    exports Sidebars.CustomerSidebar;
+
+    opens Sidebars.DealerSidebar to javafx.fxml;
+    exports Sidebars.DealerSidebar;
+
+    opens Sidebars.RetailerSidebar to javafx.fxml;
+    exports Sidebars.RetailerSidebar;
 }
