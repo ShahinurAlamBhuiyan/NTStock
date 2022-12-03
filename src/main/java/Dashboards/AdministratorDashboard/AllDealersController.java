@@ -17,27 +17,27 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class AllRetailersController implements Initializable {
+public class AllDealersController implements Initializable {
     @FXML
-    private TableView<UserInformation> AllRetailersTable;
+    private TableView<UserInformation> AllDealersTable;
     @FXML
-    private TableColumn<UserInformation, String> RetailerName;
+    private TableColumn<UserInformation, String> DealerName;
     @FXML
-    private TableColumn<UserInformation, String> RetailerAddress;
+    private TableColumn<UserInformation, String> DealerAddress;
     @FXML
-    private TableColumn<UserInformation, String> RetailerContact;
+    private TableColumn<UserInformation, String> DealerContact;
 
     @FXML
-    private Label TotalRetailerLabel;
+    private Label TotalDealerLabel;
 
 
 
 
 
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
-    ObservableList<UserInformation> retailerListR = FXCollections.observableArrayList(usersInfo);
+    ObservableList<UserInformation> dealerListR = FXCollections.observableArrayList(usersInfo);
 
-    void getAllRetailers() {
+    void getAllDeallers() {
         try{
             File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
             Scanner fileReader = new Scanner(file);
@@ -46,11 +46,11 @@ public class AllRetailersController implements Initializable {
                 usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
-                if(user.getRole().equals("Retailer")){
-                    retailerListR.add(user);
+                if(user.getRole().equals("Dealer")){
+                    dealerListR.add(user);
                 }
             }
-            TotalRetailerLabel.setText("Total Retailers: "+ retailerListR.size());
+            TotalDealerLabel.setText("Total Dealers: "+ dealerListR.size());
 
         }catch(Exception e){
             e.printStackTrace();
@@ -60,13 +60,13 @@ public class AllRetailersController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        getAllRetailers();
-        RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("username"));
-        RetailerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
-        RetailerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
+        getAllDeallers();
+        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("username"));
+        DealerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
+        DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
 
 
-        AllRetailersTable.setItems(retailerListR);
+        AllDealersTable.setItems(dealerListR);
     }
 
 

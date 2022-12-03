@@ -157,7 +157,17 @@ public class DashboardsController {
     }
 
     @FXML
-    void AHandleAllDealersBtn(ActionEvent event) {}
+    void AHandleAllDealersBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/AllDealers.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void AHandleComplainsBtn(ActionEvent event) {}
     @FXML

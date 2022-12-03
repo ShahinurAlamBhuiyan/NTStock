@@ -23,6 +23,12 @@ public class UserInformation {
         this.userRandomId = userRandomId;
     }
 
+    public UserInformation(String username, String email, String birthday) {
+        this.username = username;
+        this.email = email;
+        this.birthday = birthday;
+    }
+
     public String getEmail() {
         return email;
     }
