@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label layoutX="14.0" layoutY="98.0" style="-fx-background-color: #FFFFFF;" text="Daily Deals" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <HBox layoutY="124.0" prefHeight="100.0" prefWidth="427.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_5.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="4.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_6.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="4.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="9.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane prefHeight="93.0" prefWidth="425.0">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="427.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Banner.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HBox layoutY="257.0" prefHeight="76.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_8.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_13.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_11.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_9.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Screenshot_12.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children></HBox>
+      <Button layoutX="201.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: transparent;" text="⮟" />
+      <Separator layoutX="103.0" layoutY="106.0" prefHeight="3.0" prefWidth="78.0" />
+      <Label layoutX="12.0" layoutY="232.0" text="Top Sellers" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="117.0" layoutY="240.0" prefHeight="3.0" prefWidth="78.0" />
+      <VBox layoutX="438.0" layoutY="30.0" opacity="0.54" prefHeight="194.0" prefWidth="162.0" style="-fx-background-color: #142521;">
+         <children>
+            <Pane prefHeight="38.0" prefWidth="162.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/icons/male-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="8.0" text="Sabbir Hossain" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="20.0" prefHeight="6.0" prefWidth="106.0" text="Modhumoti Enterprise" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Italic" size="7.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="38.0" prefWidth="162.0">
+               <children>
+                  <Pane layoutY="2.0" prefHeight="38.0" prefWidth="162.0">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Image/icons/male-user.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="46.0" layoutY="8.0" text=" Amit Cohudhury" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="20.0" prefHeight="6.0" prefWidth="106.0" text="Pushpita brothers" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Italic" size="7.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/icons/male-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="10.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="38.0" prefWidth="162.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/icons/male-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="8.0" text="Tonnmoy Muriwala" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="20.0" prefHeight="6.0" prefWidth="106.0" text="Benson Enterprise" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Italic" size="7.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="38.0" prefWidth="162.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/icons/male-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="8.0" text="Fahad ali" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="20.0" prefHeight="6.0" prefWidth="106.0" text="Chandpur Fish shop" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Italic" size="7.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="38.0" prefWidth="162.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/icons/male-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="8.0" text="Shafinaz Shahinn" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="20.0" prefHeight="6.0" prefWidth="106.0" text="Raisa Enterprise" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Italic" size="7.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label layoutX="439.0" layoutY="6.0" text="Recents" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="511.0" layoutY="13.0" prefHeight="0.0" prefWidth="53.0" />
+      <HBox layoutX="-2.0" layoutY="333.0" prefHeight="18.0" prefWidth="602.0">
+         <children>
+            <Label text="Shobji Wala" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Hasan Super Shop" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="43.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Ahar Super shop" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="31.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Moshla Ghor" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="46.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="NY General Store" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="43.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
