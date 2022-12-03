@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.AdministratorDashboard.AllRetailersController">
+   <children>
+      <VBox layoutX="105.0" layoutY="94.0" prefHeight="266.0" prefWidth="799.0">
+         <children>
+            <Label fx:id="RetailerName" prefHeight="43.0" prefWidth="796.0" text="hello" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="AllRetailer" layoutX="106.0" layoutY="39.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

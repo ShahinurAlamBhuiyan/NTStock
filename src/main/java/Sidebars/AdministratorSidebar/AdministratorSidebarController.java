@@ -1,6 +1,8 @@
 package Sidebars.AdministratorSidebar;
 
+import Auths.SignIn.FXMLScene;
 import Auths.SignIn.SignInController;
+import Dashboards.DashboardsController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class AdministratorSidebarController {
@@ -33,10 +37,8 @@ public class AdministratorSidebarController {
     void handleAllDealersBtn(ActionEvent event) {
 
     }
-
     @FXML
     void handleAllRetailersListBtn(ActionEvent event) {
-
     }
 
     @FXML
