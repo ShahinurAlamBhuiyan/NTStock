@@ -52,4 +52,5 @@ module com.example.ntstock {
 
     opens Sidebars.RetailerSidebar to javafx.fxml;
     exports Sidebars.RetailerSidebar;
+
 }
