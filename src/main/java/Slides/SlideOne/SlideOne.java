@@ -24,7 +24,7 @@ public class SlideOne extends Application {
 
         stage.show();
     }
-    // merge with shorower
+    // merge with Nafis
     public static void main(String[] args) {
         launch();
     }
