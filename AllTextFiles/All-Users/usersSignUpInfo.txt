@@ -1,4 +1,5 @@
 sabbirR@gmail.com sabbirR Retailer SabbirAhmed Male 2022-11-28 2022-11-28 72
+shoroRetailer@gmail.com shoroRetailer Retailer shoroRetailer Male 2022-12-31 2022-12-04 84
 dd dd Dealer dd Male 2022-11-23 2022-11-30 84
 rr rr Retailer rr Male 2022-11-02 2022-11-30 30
 aa aa Administrator aa Male 2022-11-09 2022-11-30 58
