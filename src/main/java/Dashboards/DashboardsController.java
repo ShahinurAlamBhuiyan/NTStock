@@ -130,18 +130,28 @@ public class DashboardsController {
 
     @FXML
     void CHandleHomeSideBtn(ActionEvent event) { // Customer Sidebar.
-//        try {
-//            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboardInfo/CustomerDashboardInfo.fxml"));
-//            MainBorderPane.setCenter(p);
-//            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            stage.setTitle("NTStock");
-//            stage.show();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboard/CustomerHome.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
-    void CHandleComplainBtn(ActionEvent event) {}
+    void CHandleComplainBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboard/ComplainBox.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void AHandleAllRetailersListBtn(ActionEvent event) {
