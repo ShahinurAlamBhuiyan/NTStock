@@ -10,14 +10,14 @@
 <AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.AdministratorDashboard.AllRetailersController">
    <children>
       <Button fx:id="BgButton" disable="true" layoutX="46.0" layoutY="56.0" mnemonicParsing="false" opacity="0.37" prefHeight="517.0" prefWidth="895.0" style="-fx-background-radius: 15 15 15 15; -fx-background-color: #2CCF6F;" />
-      <TableView fx:id="AllDealersTable" layoutX="84.0" layoutY="127.0" maxHeight="480.0" prefHeight="406.0" prefWidth="812.0" style="-fx-background-color: Transparent;">
+      <TableView fx:id="AllRetailersTable" layoutX="84.0" layoutY="127.0" maxHeight="480.0" prefHeight="406.0" prefWidth="812.0" style="-fx-background-color: Transparent;">
          <columns>
-            <TableColumn fx:id="DealerName" maxWidth="350.0" minWidth="250.0" prefWidth="250.0" style="-fx-background-color: Transparent;" text="Dealer Name" />
-            <TableColumn fx:id="DealerAddress" maxWidth="250.0" minWidth="102.03604125976562" prefWidth="330.0" style="-fx-background-color: Transparent;" text="Address" />
-            <TableColumn fx:id="DealerContact" maxWidth="319.0" minWidth="250.0" prefWidth="316.42010498046875" style="-fx-background-color: Transparent;" text="Contact" />
+            <TableColumn fx:id="RetailerName" maxWidth="350.0" minWidth="250.0" prefWidth="250.0" style="-fx-background-color: Transparent;" text="Retailer Name" />
+            <TableColumn fx:id="RetailerAddress" maxWidth="250.0" minWidth="102.03604125976562" prefWidth="330.0" style="-fx-background-color: Transparent;" text="Address" />
+            <TableColumn fx:id="RetailerContact" maxWidth="319.0" minWidth="250.0" prefWidth="316.42010498046875" style="-fx-background-color: Transparent;" text="Contact" />
          </columns>
       </TableView>
-      <Label fx:id="TotalDealerLabel" layoutX="694.0" layoutY="75.0" prefHeight="39.0" prefWidth="250.0" text="Total Retailers: 00" textFill="WHITE">
+      <Label fx:id="TotalRetailerLabel" layoutX="694.0" layoutY="75.0" prefHeight="39.0" prefWidth="250.0" text="Total Retailers: 00" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
