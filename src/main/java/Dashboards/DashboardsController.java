@@ -8,8 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -188,13 +186,45 @@ public class DashboardsController {
     @FXML
     void RHandleDealersListBtn(ActionEvent event) {}
     @FXML
-    void RHandleMyDealersListBtn(ActionEvent event) {}
+    void RHandleMyDealersListBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/RetailerDashboard/MyDealers.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void RHandleMyProductsBtn(ActionEvent event) {}
     @FXML
     void DHandleRetailersListBtn(ActionEvent event) {}
     @FXML
-    void DHandleMyProductsBtn(ActionEvent event) {}
+    void DHandleMyProductsBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/MyProducts.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    void DHandleAddProduct(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/AddProduct.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void DHandleAddProduct(ActionEvent event) {
         try {
