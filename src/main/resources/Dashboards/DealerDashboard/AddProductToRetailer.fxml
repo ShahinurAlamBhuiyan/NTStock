@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.DealerDashboard.AddProductToRetailerController">
+   <children>
+      <Label layoutX="241.0" layoutY="24.0" text="Add Sold Product to the Retailer Profile" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="75.0" layoutY="74.0" prefHeight="472.0" prefWidth="833.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 7; -fx-border-width: 3px;">
+         <children>
+            <VBox prefHeight="403.0" prefWidth="731.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Product Name: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Product Id: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Product Price (per): " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Product Quantity: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Total Price: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField disable="true" prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Retailer Name: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Retailer Id: " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="11.0" top="25.0" />
+         </padding>
+      </HBox>
+      <Button layoutX="444.0" layoutY="557.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow height="6.26" radius="7.789999999999999" width="26.9">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

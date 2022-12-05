@@ -70,14 +70,14 @@ public class SignUpController implements Initializable {
 
     public int generateRandomNumber(){
         Random r = new Random();
-        int low = 10;
-        int high = 100;
+        int low = 10000;
+        int high = 10000000;
         int result = r.nextInt(high-low) + low;
         return result;
     }
     @FXML
     void handleSignUp(ActionEvent event) {
-
+        System.out.println(generateRandomNumber());
 
         if(!fullNameTField.getText().equals("")){
             if(!emailTField.getText().equals("")){

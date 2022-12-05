@@ -46,6 +46,8 @@ public class DashboardsController {
     private VBox DealerSidebar;
     @FXML
     private Button DMyProductsBtn;
+    @FXML
+    private Button DAddProduct;
 
     @FXML
     private Button DRetailersListBtn;
@@ -61,8 +63,6 @@ public class DashboardsController {
 
     @FXML
     private BorderPane MainBorderPane;
-
-
 
 
     @FXML
@@ -195,4 +195,16 @@ public class DashboardsController {
     void DHandleRetailersListBtn(ActionEvent event) {}
     @FXML
     void DHandleMyProductsBtn(ActionEvent event) {}
+    @FXML
+    void DHandleAddProduct(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/AddProductToRetailer.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
