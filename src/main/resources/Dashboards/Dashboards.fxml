@@ -42,7 +42,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="CComplainBtn" alignment="CENTER" mnemonicParsing="false" onAction="#CHandleComplainBtn"  opacity="0.58" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #142521;" styleClass="sidebar" text="Complain" textFill="#f5f5f5">
+                              <Button fx:id="CComplainBtn" alignment="CENTER" mnemonicParsing="false" onAction="#CHandleComplainBtn" opacity="0.58" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #142521;" styleClass="sidebar" text="Complain" textFill="#f5f5f5">
                                  <font>
                                     <Font name="Arial Bold" size="25.0" />
                                  </font>
@@ -244,7 +244,7 @@
                         </Button>
                      </children>
                   </VBox>
-                  <VBox fx:id="DealerSidebar" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="246.0" visible="false">
+                  <VBox fx:id="DealerSidebar" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="246.0">
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="514.0" prefWidth="246.0" spacing="13.0">
                            <children>
@@ -278,6 +278,21 @@
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
+                              </Button>
+                              <Button fx:id="DAddProduct" alignment="CENTER" mnemonicParsing="false" onAction="#DHandleAddProduct" opacity="0.58" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #142521;" styleClass="sidebar" text="Add Product" textFill="#f5f5f5">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/icons/add_product.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
                               </Button>
                            </children>
                         </VBox>
