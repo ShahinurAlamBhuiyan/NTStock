@@ -5,6 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
+import java.io.FileWriter;
+import java.time.LocalDate;
+
+
 public class AddProductToRetailerController {
 
     @FXML
@@ -29,6 +33,14 @@ public class AddProductToRetailerController {
     private TextField RetailerNameTF;
 
     @FXML
+    void handleCalculateBtn(ActionEvent event) {
+        int perPrice = Integer.parseInt(ProductPerPriceTF.getText());
+        int quantity = Integer.parseInt(ProductQuantityTF.getText());
+        int totalPrice =  perPrice * quantity;
+        ProductTotalPriceTF.setText(String.valueOf(totalPrice));
+    }
+
+    @FXML
     void handleAddBtn(ActionEvent event) {
         System.out.println("button clicked");
 
@@ -38,8 +50,30 @@ public class AddProductToRetailerController {
                 && !ProductQuantityTF.getText().equals("")
                 && !RetailerNameTF.getText().equals("")
                 && !RetailerIDTF.getText().equals("")
-        ){
-
+        ){ // all filled
+            String filePath = "AllTextFiles/SoldProducts/AllDealersSoldProducts.txt";
+            try{
+                FileWriter writer = new FileWriter(filePath, true);
+                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerNameTF.getText()+" "+RetailerIDTF.getText()+ " "+ LocalDate.now()+ "\n");
+                writer.close();
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Congratulations!");
+                alert.setContentText("Product Added Successfully!");
+                alert.showAndWait();
+                ProductIDTF.clear();
+                ProductNameTF.clear();
+                ProductPerPriceTF.clear();
+                ProductQuantityTF.clear();
+                ProductTotalPriceTF.clear();
+                RetailerIDTF.clear();
+                RetailerNameTF.clear();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Wrong!");
+                alert.setContentText("Something wrong in opening file!");
+                alert.showAndWait();
+            }
 
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);

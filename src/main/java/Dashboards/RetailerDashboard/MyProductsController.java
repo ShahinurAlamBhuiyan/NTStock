@@ -1,4 +1,4 @@
-package Dashboards.DealerDashboard;
+package Dashboards.RetailerDashboard;
 
 public class MyProductsController {
 }

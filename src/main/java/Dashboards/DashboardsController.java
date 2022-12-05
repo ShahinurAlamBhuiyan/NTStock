@@ -198,14 +198,9 @@ public class DashboardsController {
         }
     }
     @FXML
-    void RHandleMyProductsBtn(ActionEvent event) {}
-    @FXML
-    void DHandleRetailersListBtn(ActionEvent event) {}
-    @FXML
-    void DHandleMyProductsBtn(ActionEvent event) {
-        System.out.println("Button clicked");
+    void RHandleMyProductsBtn(ActionEvent event) {
         try {
-            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/MyProducts.fxml"));
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/RetailerDashboard/MyProducts.fxml"));
             MainBorderPane.setCenter(p);
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("NTStock");
@@ -214,6 +209,10 @@ public class DashboardsController {
             e.printStackTrace();
         }
     }
+    @FXML
+    void DHandleRetailersListBtn(ActionEvent event) {}
+    @FXML
+    void DHandleMyProductsBtn(ActionEvent event) {}
     // merge with shahin
 
     @FXML

@@ -29,7 +29,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ProductNameTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductNameTF" prefHeight="40.0" prefWidth="420.0" promptText="Potato" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="731.0">
@@ -39,7 +39,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ProductIDTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductIDTF" prefHeight="40.0" prefWidth="420.0" promptText="1256" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -49,7 +49,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ProductPerPriceTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductPerPriceTF" prefHeight="40.0" prefWidth="420.0" promptText=" 15 /-" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -59,7 +59,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ProductQuantityTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductQuantityTF" prefHeight="40.0" prefWidth="420.0" promptText="50 pics" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
@@ -69,7 +69,13 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ProductTotalPriceTF" disable="true" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductTotalPriceTF" disable="true" prefHeight="40.0" prefWidth="266.0" text="00" />
+                        <HBox prefHeight="41.0" prefWidth="58.0" />
+                        <Button mnemonicParsing="false" onAction="#handleCalculateBtn" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: green;" text="Calculate" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -79,7 +85,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="RetailerNameTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="RetailerNameTF" prefHeight="40.0" prefWidth="420.0" promptText="Shahin" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
@@ -89,7 +95,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="RetailerIDTF" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="RetailerIDTF" prefHeight="40.0" prefWidth="420.0" promptText="879" />
                      </children>
                   </HBox>
                </children>
