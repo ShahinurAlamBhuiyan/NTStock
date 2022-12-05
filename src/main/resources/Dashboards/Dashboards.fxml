@@ -244,7 +244,7 @@
                         </Button>
                      </children>
                   </VBox>
-                  <VBox fx:id="DealerSidebar" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="246.0">
+                  <VBox fx:id="DealerSidebar" alignment="TOP_CENTER" prefHeight="598.0" prefWidth="246.0" visible="false">
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="514.0" prefWidth="246.0" spacing="13.0">
                            <children>
