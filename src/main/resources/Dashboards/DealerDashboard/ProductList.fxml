@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="30.0" layoutY="180.0" prefHeight="381.0" prefWidth="936.0" style="-fx-background-color: transparent;">
+        <columns>
+          <TableColumn prefWidth="241.66188049316406" style="-fx-color: white;" text="Product Name" />
+          <TableColumn minWidth="2.912872314453125" prefWidth="115.09890747070312" style="-fx-color: white;" text="Product Per Price" />
+            <TableColumn prefWidth="145.57354736328125" text="Product Quantity" />
+            <TableColumn prefWidth="276.92645263671875" text="Delar Name" />
+            <TableColumn prefWidth="159.81268310546875" style="-fx-border-color: black;" text="Buying Date" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="32.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Table Contains All Products" wrappingWidth="474.5698547363281">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="689.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Products:">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="104.0" fitWidth="299.0" layoutX="27.0" layoutY="-7.0">
+         <image>
+            <Image url="@java/NTStock/src/main/resources/Image/ntlogo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="228.0" text="Search">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="790.0" layoutY="17.0">
+         <image>
+            <Image url="@java/NTStock/src/main/resources/Image/icons/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
