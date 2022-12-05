@@ -203,6 +203,7 @@ public class DashboardsController {
     void DHandleRetailersListBtn(ActionEvent event) {}
     @FXML
     void DHandleMyProductsBtn(ActionEvent event) {
+        System.out.println("Button clicked");
         try {
             Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/MyProducts.fxml"));
             MainBorderPane.setCenter(p);
@@ -213,6 +214,7 @@ public class DashboardsController {
             e.printStackTrace();
         }
     }
+    // merge with shahin
 
     @FXML
     void DHandleAddProduct(ActionEvent event) {
