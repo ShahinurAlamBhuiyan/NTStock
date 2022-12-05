@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.DealerDashboard.AddProductToRetailerController">
    <children>
       <Label layoutX="241.0" layoutY="24.0" text="Add Sold Product to the Retailer Profile" textFill="WHITE" underline="true">
@@ -30,7 +29,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductNameTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="731.0">
@@ -40,7 +39,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductIDTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -50,7 +49,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductPerPriceTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -60,7 +59,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductQuantityTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
@@ -70,7 +69,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField disable="true" prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="ProductTotalPriceTF" disable="true" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
@@ -80,7 +79,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="RetailerNameTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">
@@ -90,7 +89,7 @@
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="40.0" prefWidth="420.0" />
+                        <TextField fx:id="RetailerIDTF" prefHeight="40.0" prefWidth="420.0" />
                      </children>
                   </HBox>
                </children>
@@ -100,7 +99,7 @@
             <Insets left="11.0" top="25.0" />
          </padding>
       </HBox>
-      <Button layoutX="444.0" layoutY="557.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+      <Button layoutX="444.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="17.0" />
          </font>
