@@ -80,12 +80,12 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="731.0">
                      <children>
-                        <Label prefHeight="30.0" prefWidth="281.0" text="Retailer Name: " textFill="WHITE">
+                        <Label prefHeight="30.0" prefWidth="281.0" text="Retailer Email: " textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="25.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="RetailerNameTF" prefHeight="40.0" prefWidth="420.0" promptText="Shahin" />
+                        <TextField fx:id="RetailerEmailTF" prefHeight="40.0" prefWidth="420.0" promptText="shahin@gmail.com" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="731.0">

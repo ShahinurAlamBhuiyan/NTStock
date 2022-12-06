@@ -30,7 +30,7 @@ public class AddProductToRetailerController {
     private TextField RetailerIDTF;
 
     @FXML
-    private TextField RetailerNameTF;
+    private TextField RetailerEmailTF;
 
     @FXML
     void handleCalculateBtn(ActionEvent event) {
@@ -48,13 +48,13 @@ public class AddProductToRetailerController {
             && !ProductIDTF.getText().equals("")
                 && !ProductPerPriceTF.getText().equals("")
                 && !ProductQuantityTF.getText().equals("")
-                && !RetailerNameTF.getText().equals("")
+                && !RetailerEmailTF.getText().equals("")
                 && !RetailerIDTF.getText().equals("")
-        ){ // all filled
+        ){ // if all filled
             String filePath = "AllTextFiles/SoldProducts/AllDealersSoldProducts.txt";
             try{
                 FileWriter writer = new FileWriter(filePath, true);
-                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerNameTF.getText()+" "+RetailerIDTF.getText()+ " "+ LocalDate.now()+ "\n");
+                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerEmailTF.getText()+" "+RetailerIDTF.getText()+ " "+ LocalDate.now()+ "\n");
                 writer.close();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Congratulations!");
@@ -66,7 +66,7 @@ public class AddProductToRetailerController {
                 ProductQuantityTF.clear();
                 ProductTotalPriceTF.clear();
                 RetailerIDTF.clear();
-                RetailerNameTF.clear();
+                RetailerEmailTF.clear();
             }catch(Exception e){
                 System.out.println(e.getMessage());
                 Alert alert = new Alert(Alert.AlertType.ERROR);

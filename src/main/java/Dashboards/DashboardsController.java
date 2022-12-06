@@ -1,8 +1,10 @@
 package Dashboards;
 import Auths.SignIn.*;
+import Dashboards.RetailerDashboard.MyProductsController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,7 +16,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.EventObject;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class DashboardsController {
@@ -66,9 +72,23 @@ public class DashboardsController {
     @FXML
     private Label UserNameLebel;
     @FXML
+    private Label UIDLabel;
+    @FXML
     private Label UserTypeLebel;
     @FXML
     private Label welcomeLebel;
+
+    private String userEmail;
+    private String userId;
+    private String userRole;
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
 
     public void handleSidebar(){
             try {
@@ -81,12 +101,16 @@ public class DashboardsController {
             }
     }
 
-    public void getSignedUserInfo(String role, String uEmail, String uRandomID) {
+    public void setSignedUserInfo(String role, String uEmail, String uRandomID){
+        this.userEmail = uEmail;
+        this.userId = uRandomID;
+        this.userRole = role;
         handleUser(role, uEmail, uRandomID);
         UserTypeLebel.setText(role);
+        UIDLabel.setText("UID - " + uRandomID);
         welcomeLebel.setText("Welcome to " + role + " Dashboard.");
-
     }
+
 
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
 
@@ -227,4 +251,6 @@ public class DashboardsController {
             e.printStackTrace();
         }
     }
+
+
 }

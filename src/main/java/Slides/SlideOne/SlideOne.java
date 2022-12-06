@@ -10,6 +10,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class SlideOne extends Application {
+    static public String loggedInUserName = "";
+    static public String loggedInUserID = "";
+    static public String loggedInUserEmail = "";
+    static public String loggedInUserType = "";
 
     @Override
     public void start(Stage stage) throws IOException {

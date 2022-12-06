@@ -85,7 +85,6 @@ public class SignUpController implements Initializable {
                     if(!(dobTField.getValue() == null)){
                         if(!(genderChoiceBox.getValue()==null)){
                             if(!(userTypeChoiceBox.getValue()==null)){
-//                                if(!(areaChoiceBox.getValue()==null)){
                                     if(termsCheckBox.isSelected()){
                                         System.out.println("Success");
                                         int fileRandomValue = generateRandomNumber();

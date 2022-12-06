@@ -336,9 +336,14 @@
                               <Image url="@../Image/icons/male-user.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="UserTypeLebel" layoutX="88.0" layoutY="39.0" prefHeight="24.0" prefWidth="127.0" text="Customer" textFill="WHITE">
+                        <Label fx:id="UserTypeLebel" layoutX="86.0" layoutY="43.0" prefHeight="18.0" prefWidth="96.0" text="Customer" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="UIDLabel" layoutX="88.0" layoutY="59.0" prefHeight="13.0" prefWidth="96.0" text="UID - " textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="9.0" />
                            </font>
                         </Label>
                      </children>
