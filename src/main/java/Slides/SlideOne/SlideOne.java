@@ -20,7 +20,6 @@ public class SlideOne extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(SlideOne.class.getResource("SlideOne.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("NTStock");
-//        stage.getIcons().add(new Image("/src/main/resources/Image/ntlogo.png"));
         File file = new File("src/main/resources/Image/ntlogo.png");
         Image image = new Image(file.toURI().toString());
         stage.getIcons().add(image);
