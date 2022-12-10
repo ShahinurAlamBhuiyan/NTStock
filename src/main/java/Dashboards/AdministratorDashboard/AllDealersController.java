@@ -30,10 +30,6 @@ public class AllDealersController implements Initializable {
     @FXML
     private Label TotalDealerLabel;
 
-
-
-
-
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
     ObservableList<UserInformation> dealerListR = FXCollections.observableArrayList(usersInfo);
 
@@ -61,7 +57,7 @@ public class AllDealersController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getAllDealers();
-        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("firstName"));
+        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
         DealerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
         DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
 

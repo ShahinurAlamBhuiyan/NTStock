@@ -12,11 +12,12 @@
       <Button fx:id="BgButton" disable="true" layoutX="46.0" layoutY="47.0" mnemonicParsing="false" opacity="0.37" prefHeight="497.0" prefWidth="895.0" style="-fx-background-radius: 15 15 15 15; -fx-background-color: #2CCF6F;" />
       <TableView fx:id="MyProductsTable" layoutX="89.0" layoutY="137.0" prefHeight="392.0" prefWidth="812.0" style="-fx-background-color: transparent;">
         <columns>
-          <TableColumn fx:id="ProductName" maxWidth="195.0" prefWidth="241.66188049316406" text="Product Name" />
-          <TableColumn fx:id="ProductPerPrice" maxWidth="195.0" minWidth="2.912872314453125" prefWidth="115.09890747070312" text="Product Per Price" />
-            <TableColumn fx:id="ProductQuantity" maxWidth="195.0" prefWidth="145.57354736328125" text="Product Quantity" />
-            <TableColumn fx:id="Total" maxWidth="195.0" prefWidth="276.92645263671875" text="Total" />
-            <TableColumn fx:id="BuyingDate" maxWidth="195.0" prefWidth="159.81268310546875" text="Buying Date" />
+          <TableColumn fx:id="ProductName" maxWidth="195.0" prefWidth="150.50194549560547" text="Product Name" />
+            <TableColumn fx:id="DealerName" maxWidth="208.94912719726562" prefWidth="178.15159606933594" text="Dealer Name" />
+          <TableColumn fx:id="ProductPerPrice" maxWidth="195.0" minWidth="2.912872314453125" prefWidth="114.65164184570312" text="Product Per Price" />
+            <TableColumn fx:id="ProductQuantity" maxWidth="195.0" prefWidth="126.7513427734375" text="Product Quantity" />
+            <TableColumn fx:id="Total" maxWidth="255.44635009765625" prefWidth="118.05084228515625" text="Total" />
+            <TableColumn fx:id="BuyingDate" maxWidth="308.7908935546875" prefWidth="123.44915771484375" text="Buying Date" />
         </columns>
       </TableView>
       <Text fill="WHITE" layoutX="89.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Table Contains All Products" wrappingWidth="474.5698547363281">

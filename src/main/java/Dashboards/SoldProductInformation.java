@@ -1,17 +1,23 @@
 package Dashboards;
 
+import static Slides.SlideOne.SlideOne.loggedInUserEmail;
+import static Slides.SlideOne.SlideOne.loggedInUserID;
+
 public class SoldProductInformation {
-    private String productName;
-    private String productId;
-    private String productPerPrice;
-    private String productQuantity;
-    private String productTotalPrice;
+    private final String productName;
+    private final String productId;
+    private final String productPerPrice;
+    private final String productQuantity;
+    private final String productTotalPrice;
 
-    private String retailerId;
-    private String retailerEmail;
-    private String buyingDate;
+    private final String retailerId;
+    private final String retailerEmail;
+    private String dealerEmail;
+    private String dealerId;
+    private final String dealerName;
+    private final String buyingDate;
 
-    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice,  String retailerEmail,String retailerId, String buyingDate) {
+    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice,  String retailerEmail,String retailerId,  String dealerEmail,String dealerId,String dealerFirstName,String dealerLastName, String buyingDate) {
         this.productName = productName;
         this.productId = productId;
         this.productPerPrice = productPerPrice;
@@ -20,6 +26,9 @@ public class SoldProductInformation {
         this.retailerEmail = retailerEmail;
         this.retailerId = retailerId;
         this.buyingDate = buyingDate;
+        this.dealerEmail = dealerEmail;
+        this.dealerId = dealerId;
+        dealerName = dealerFirstName + " " + dealerLastName;
     }
 
     public String getProductName() {
@@ -48,6 +57,26 @@ public class SoldProductInformation {
 
     public String getRetailerEmail() {
         return retailerEmail;
+    }
+
+    public String getDealerEmail() {
+        return dealerEmail;
+    }
+
+    public void setDealerEmail(String dealerEmail) {
+        this.dealerEmail = dealerEmail;
+    }
+
+    public String getDealerId() {
+        return dealerId;
+    }
+
+    public String getDealerName() {
+        return dealerName;
+    }
+
+    public void setDealerId(String dealerId) {
+        this.dealerId = dealerId;
     }
 
     public String getBuyingDate() {
