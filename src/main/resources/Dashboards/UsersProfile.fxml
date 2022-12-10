@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="990.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="990.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox layoutX="524.0" layoutY="14.0" prefHeight="476.0" prefWidth="418.0" spacing="10.0">
          <children>
@@ -19,7 +19,7 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="440.0" prefWidth="418.0" style="-fx-background-radius: 12 12 12 12; -fx-background-color: #2CCF6F;">
+            <Button mnemonicParsing="false" opacity="0.8" prefHeight="440.0" prefWidth="418.0" style="-fx-background-radius: 12 12 12 12; -fx-background-color: #757575;">
                <graphic>
                   <VBox prefHeight="440.0" prefWidth="402.0">
                      <children>
@@ -144,7 +144,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="440.0" prefWidth="418.0" style="-fx-background-radius: 12 12 12 12; -fx-background-color: #2CCF6F;">
+            <Button mnemonicParsing="false" opacity="0.8" prefHeight="440.0" prefWidth="418.0" style="-fx-background-radius: 12 12 12 12; -fx-background-color: #757575;">
                <graphic>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
