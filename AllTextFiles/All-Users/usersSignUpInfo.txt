@@ -1,5 +1,6 @@
-johnR@gmail.com johnR@gmail.com Retailer John Retailer Male 2022-12-10 2022-12-10 6558726
-johnD@gmail.com johnD@gmail.com Dealer John Dealer Male 2022-12-10 2022-12-10 222679
-johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-10 5133280
-johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948
-mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351
+johnR@gmail.com johnR@gmail.com Retailer John Retailer Male 2022-12-10 2022-12-10 6558726 * *
+johnD@gmail.com johnD@gmail.com Dealer John Dealer Male 2022-12-10 2022-12-10 222679 * *
+johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-10 5133280 * *
+johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948 * *
+mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351 * *
+shahinC@gmail.com shahinC@gmail.com Customer Shahin BhuiyanC Male 2022-12-10 2022-12-10 5110649 * * 

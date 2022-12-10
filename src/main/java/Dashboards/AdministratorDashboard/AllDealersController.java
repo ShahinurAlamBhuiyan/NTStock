@@ -39,7 +39,7 @@ public class AllDealersController implements Initializable {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
                 if(user.getRole().equals("Dealer")){
