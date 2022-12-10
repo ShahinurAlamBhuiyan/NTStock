@@ -10,13 +10,16 @@ import java.io.File;
 import java.io.IOException;
 
 public class SlideOne extends Application {
+    static public String loggedInUserName = "";
+    static public String loggedInUserID = "";
+    static public String loggedInUserEmail = "";
+    static public String loggedInUserType = "";
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SlideOne.class.getResource("SlideOne.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("NTStock");
-//        stage.getIcons().add(new Image("/src/main/resources/Image/ntlogo.png"));
         File file = new File("src/main/resources/Image/ntlogo.png");
         Image image = new Image(file.toURI().toString());
         stage.getIcons().add(image);
@@ -24,7 +27,7 @@ public class SlideOne extends Application {
 
         stage.show();
     }
-    // merge with Main
+    // merge with  shahin
     public static void main(String[] args) {
         launch();
     }

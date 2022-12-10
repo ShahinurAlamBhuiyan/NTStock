@@ -1,22 +1,26 @@
 package Dashboards;
 import Auths.SignIn.*;
+import Dashboards.RetailerDashboard.MyProductsController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.EventObject;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class DashboardsController {
@@ -46,6 +50,8 @@ public class DashboardsController {
     private VBox DealerSidebar;
     @FXML
     private Button DMyProductsBtn;
+    @FXML
+    private Button DAddProduct;
 
     @FXML
     private Button DRetailersListBtn;
@@ -63,14 +69,30 @@ public class DashboardsController {
     private BorderPane MainBorderPane;
 
 
-
-
     @FXML
     private Label UserNameLebel;
+    @FXML
+    private Label UIDLabel;
     @FXML
     private Label UserTypeLebel;
     @FXML
     private Label welcomeLebel;
+
+    private String userEmail;
+    private String userId;
+    private String userRole;
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+
+
+
 
     public void handleSidebar(){
             try {
@@ -83,12 +105,16 @@ public class DashboardsController {
             }
     }
 
-    public void getSignedUserInfo(String role, String uEmail, String uRandomID) {
+    public void setSignedUserInfo(String role, String uEmail, String uRandomID){
+        this.userEmail = uEmail;
+        this.userId = uRandomID;
+        this.userRole = role;
         handleUser(role, uEmail, uRandomID);
         UserTypeLebel.setText(role);
+        UIDLabel.setText("UID - " + uRandomID);
         welcomeLebel.setText("Welcome to " + role + " Dashboard.");
-
     }
+
 
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
 
@@ -99,10 +125,10 @@ public class DashboardsController {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
-                UserNameLebel.setText(user.getUsername());
+                UserNameLebel.setText(user.getFirstName() + " "+ user.getLastName());
             }
 
         } catch (Exception e) {
@@ -128,20 +154,46 @@ public class DashboardsController {
     }
 
 
+
+
     @FXML
     void CHandleHomeSideBtn(ActionEvent event) { // Customer Sidebar.
-//        try {
-//            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboardInfo/CustomerDashboardInfo.fxml"));
-//            MainBorderPane.setCenter(p);
-//            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            stage.setTitle("NTStock");
-//            stage.show();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboard/CustomerHome.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void handleShowProfileBtn(ActionEvent event){
+        System.out.println("clicked");
+        try{
+            Pane p = FXMLLoader.load(getClass().getResource("UsersProfile.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
     @FXML
-    void CHandleComplainBtn(ActionEvent event) {}
+    void CHandleComplainBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/CustomerDashboard/ComplainBox.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void AHandleAllRetailersListBtn(ActionEvent event) {
@@ -178,11 +230,47 @@ public class DashboardsController {
     @FXML
     void RHandleDealersListBtn(ActionEvent event) {}
     @FXML
-    void RHandleMyDealersListBtn(ActionEvent event) {}
+    void RHandleMyDealersListBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/RetailerDashboard/MyDealers.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
-    void RHandleMyProductsBtn(ActionEvent event) {}
+    void RHandleMyProductsBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/RetailerDashboard/MyProducts.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void DHandleRetailersListBtn(ActionEvent event) {}
     @FXML
     void DHandleMyProductsBtn(ActionEvent event) {}
+    // merge with shahin
+
+    @FXML
+    void DHandleAddProduct(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/AddProductToRetailer.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

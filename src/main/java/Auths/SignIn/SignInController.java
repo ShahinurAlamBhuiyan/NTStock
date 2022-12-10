@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static Slides.SlideOne.SlideOne.*;
+
 public class SignInController {
     private Stage stage;
     private Scene scene;
@@ -50,6 +52,7 @@ public class SignInController {
 
     public String role=null;
     public String userRandomId=null;
+    public String userEmail = null;
     @FXML
     void handleSignIn(ActionEvent event) {
         if(customerToggle.isSelected()){
@@ -75,13 +78,18 @@ public class SignInController {
 
                         while(fileReader.hasNext())
                         {
-                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
                         }
 
                         for(UserInformation user : usersInfo){
                             if(user.getEmail().equals(userEmailTF.getText()) && user.getPassword().equals(passwordTF.getText()) && user.getRole().equals(role)){
                                 isMatch = true;
                                 userRandomId = user.getUserRandomId();
+                                this.userEmail = user.getEmail();
+                                loggedInUserName = user.getFirstName()  + " " + user.getLastName();
+                                loggedInUserEmail = user.getEmail();
+                                loggedInUserType = user.getRole();
+                                loggedInUserID = user.getUserRandomId();
                                 break;
                             }else{
                                 System.out.println("Not Sign up");
@@ -138,7 +146,7 @@ public class SignInController {
             Parent root = scene.root;
             // sending data for dashboard. --------------------------------
             DashboardsController dashboardsController = (DashboardsController) scene.controller;
-            dashboardsController.getSignedUserInfo(role,userEmailTF.getText(), userRandomId);
+            dashboardsController.setSignedUserInfo(role,userEmailTF.getText(), userRandomId);
             dashboardsController.handleSidebar();
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
