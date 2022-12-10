@@ -31,7 +31,7 @@
                   <Image url="@../../Image/ntlogo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="fullNameTField" layoutX="752.0" layoutY="199.0" prefHeight="36.0" prefWidth="386.0" promptText="  Full name">
+            <TextField fx:id="firstNameTField" layoutX="752.0" layoutY="199.0" prefHeight="36.0" prefWidth="183.0" promptText="First Name">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -95,7 +95,12 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="nameRequired" layoutX="755.0" layoutY="235.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+            <Label fx:id="firstNameRequired" layoutX="755.0" layoutY="235.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameRequired" layoutX="954.0" layoutY="235.0" prefHeight="17.0" prefWidth="102.0" text="filed required*" textFill="#d32626" visible="false">
                <font>
                   <Font name="Arial Italic" size="12.0" />
                </font>
@@ -160,6 +165,11 @@
                   <Font name="Arial Bold" size="38.0" />
                </font>
             </Label>
+            <TextField fx:id="lastNameTField" layoutX="953.0" layoutY="199.0" prefHeight="36.0" prefWidth="183.0" promptText="Last Name">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
    </children>

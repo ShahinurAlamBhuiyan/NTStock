@@ -90,6 +90,10 @@ public class DashboardsController {
         return userId;
     }
 
+
+
+
+
     public void handleSidebar(){
             try {
                 if(UserTypeLebel.getText().equals("Dealer")) {DealerSidebar.setVisible(true);}
@@ -121,10 +125,10 @@ public class DashboardsController {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
-                UserNameLebel.setText(user.getUsername());
+                UserNameLebel.setText(user.getFirstName() + " "+ user.getLastName());
             }
 
         } catch (Exception e) {
@@ -150,6 +154,8 @@ public class DashboardsController {
     }
 
 
+
+
     @FXML
     void CHandleHomeSideBtn(ActionEvent event) { // Customer Sidebar.
         try {
@@ -159,6 +165,20 @@ public class DashboardsController {
             stage.setTitle("NTStock");
             stage.show();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void handleShowProfileBtn(ActionEvent event){
+        System.out.println("clicked");
+        try{
+            Pane p = FXMLLoader.load(getClass().getResource("UsersProfile.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
