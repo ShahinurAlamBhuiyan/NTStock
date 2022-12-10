@@ -61,7 +61,7 @@ public class AllRetailersController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getAllRetailers();
-        RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("firstName"));
+        RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
         RetailerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
         RetailerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
 

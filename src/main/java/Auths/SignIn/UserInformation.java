@@ -6,6 +6,7 @@ public class UserInformation {
     private String role;
     private String firstName;
     private String lastName;
+    private String userName;
     private String gender;
 
     private String birthday;
@@ -17,6 +18,7 @@ public class UserInformation {
         this.email = email;
         this.password = password;
         this.role = role;
+        this.userName = firstName + " " + lastName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -54,6 +56,10 @@ public class UserInformation {
 
     public String getUserRandomId() {
         return userRandomId;
+    }
+
+    public String getUserName() {
+        return userName;
     }
 
     public void setRole(String role) {

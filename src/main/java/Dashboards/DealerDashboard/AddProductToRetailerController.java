@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import java.io.FileWriter;
 import java.time.LocalDate;
 
+import static Slides.SlideOne.SlideOne.*;
+
 
 public class AddProductToRetailerController {
 
@@ -54,7 +56,7 @@ public class AddProductToRetailerController {
             String filePath = "AllTextFiles/SoldProducts/AllDealersSoldProducts.txt";
             try{
                 FileWriter writer = new FileWriter(filePath, true);
-                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerEmailTF.getText()+" "+RetailerIDTF.getText()+ " "+ LocalDate.now()+ "\n");
+                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerEmailTF.getText()+" "+RetailerIDTF.getText()+ " "+loggedInUserEmail+ " "+loggedInUserID + " "+loggedInUserName+" "+ LocalDate.now()+ "\n");
                 writer.close();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Congratulations!");
