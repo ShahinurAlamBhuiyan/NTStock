@@ -27,7 +27,7 @@ public class SlideOne extends Application {
 
         stage.show();
     }
-    // merge with  main
+    // merge with  mainn
     public static void main(String[] args) {
         launch();
     }
