@@ -78,7 +78,7 @@ public class SignInController {
 
                         while(fileReader.hasNext())
                         {
-                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
                         }
 
                         for(UserInformation user : usersInfo){
@@ -86,7 +86,7 @@ public class SignInController {
                                 isMatch = true;
                                 userRandomId = user.getUserRandomId();
                                 this.userEmail = user.getEmail();
-                                loggedInUserName = user.getUsername();
+                                loggedInUserName = user.getFirstName()  + " " + user.getLastName();
                                 loggedInUserEmail = user.getEmail();
                                 loggedInUserType = user.getRole();
                                 loggedInUserID = user.getUserRandomId();

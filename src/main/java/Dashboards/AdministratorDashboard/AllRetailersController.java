@@ -43,7 +43,7 @@ public class AllRetailersController implements Initializable {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
                 if(user.getRole().equals("Retailer")){
@@ -61,7 +61,7 @@ public class AllRetailersController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getAllRetailers();
-        RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("username"));
+        RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("firstName"));
         RetailerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
         RetailerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
 

@@ -28,9 +28,11 @@ public class SignUpController implements Initializable {
     @FXML
     private TextField emailTField;
 
-    @FXML
-    private TextField fullNameTField;
 
+    @FXML
+    private TextField firstNameTField;
+    @FXML
+    private TextField lastNameTField;
     @FXML
     private PasswordField passwordTField;
 
@@ -40,16 +42,11 @@ public class SignUpController implements Initializable {
     @FXML
     private ChoiceBox<String> userTypeChoiceBox;
     private String[] users = {"Customer", "Retailer", "Dealer", "Administrator"};
-
-    private String[] areas = {"Dhaka", "Chittagong", "Feni", "Rajshahi", "Barishal", "Shyllet", "Khulna","Noakhali"};
     @FXML
     private ChoiceBox<String> genderChoiceBox;
     private String[] genders = {"Male", "Female", "Others"};
     @FXML
     private CheckBox termsCheckBox;
-
-    @FXML
-    private Label areaRequired;
 
     @FXML
     private Label dobRequired;
@@ -59,7 +56,10 @@ public class SignUpController implements Initializable {
     private Label genderRequired;
 
     @FXML
-    private Label nameRequired;
+    private Label firstNameRequired;
+    @FXML
+    private Label lastNameRequired;
+
 
     @FXML
     private Label passRequired;
@@ -79,7 +79,8 @@ public class SignUpController implements Initializable {
     void handleSignUp(ActionEvent event) {
         System.out.println(generateRandomNumber());
 
-        if(!fullNameTField.getText().equals("")){
+        if(!firstNameTField.getText().equals("")){
+            if(!lastNameTField.getText().equals("")){
             if(!emailTField.getText().equals("")){
                 if(!passwordTField.getText().equals("")){
                     if(!(dobTField.getValue() == null)){
@@ -94,12 +95,12 @@ public class SignUpController implements Initializable {
                                         try{
                                             FileWriter writer1 = new FileWriter(singleUserFilePath, true);
                                             writer1.write(emailTField.getText() + " " + passwordTField.getText() + " " +
-                                                    userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
+                                                    userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
                                                     genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+"\n");
 
                                             FileWriter writer2 = new FileWriter(AllUserPath, true);
                                             writer2.write(emailTField.getText() + " " + passwordTField.getText() + " " +
-                                                    userTypeChoiceBox.getValue() + " " + fullNameTField.getText() + " " +
+                                                    userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
                                                     genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+ "\n");
                                             writer1.close();
                                             writer2.close();
@@ -143,9 +144,13 @@ public class SignUpController implements Initializable {
             }else{
                 emailRequired.setVisible(true);
             }
-            nameRequired.setVisible(false);
+            lastNameRequired.setVisible(false);
         }else{
-            nameRequired.setVisible(true);
+            lastNameRequired.setVisible(true);
+        }
+            firstNameRequired.setVisible(false);
+        }else{
+            firstNameRequired.setVisible(true);
         }
     }
 

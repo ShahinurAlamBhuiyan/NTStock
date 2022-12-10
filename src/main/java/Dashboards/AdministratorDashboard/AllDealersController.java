@@ -37,13 +37,13 @@ public class AllDealersController implements Initializable {
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
     ObservableList<UserInformation> dealerListR = FXCollections.observableArrayList(usersInfo);
 
-    void getAllDeallers() {
+    void getAllDealers() {
         try{
             File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
                 if(user.getRole().equals("Dealer")){
@@ -60,8 +60,8 @@ public class AllDealersController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        getAllDeallers();
-        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("username"));
+        getAllDealers();
+        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("firstName"));
         DealerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
         DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
 

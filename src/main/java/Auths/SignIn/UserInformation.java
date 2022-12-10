@@ -4,7 +4,8 @@ public class UserInformation {
     private String email;
     private String password;
     private String role;
-    private String username;
+    private String firstName;
+    private String lastName;
     private String gender;
 
     private String birthday;
@@ -12,19 +13,21 @@ public class UserInformation {
     private String userRandomId;
 
 
-    public UserInformation(String email, String password, String role, String username, String gender, String birthday,  String creatingTime, String userRandomId) {
+    public UserInformation(String email, String password, String role, String firstName, String lastName, String gender, String birthday,  String creatingTime, String userRandomId) {
         this.email = email;
         this.password = password;
         this.role = role;
-        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.gender = gender;
         this.birthday = birthday;
         this.creatingTime = creatingTime;
         this.userRandomId = userRandomId;
     }
 
-    public UserInformation(String username, String email, String birthday) {
-        this.username = username;
+    public UserInformation(String firstName, String lastName, String email, String birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.birthday = birthday;
     }
@@ -57,12 +60,20 @@ public class UserInformation {
         this.role = role;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getGender() {
