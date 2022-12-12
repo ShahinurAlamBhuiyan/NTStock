@@ -147,7 +147,7 @@
             </Label>
             <Button mnemonicParsing="false" opacity="0.8" prefHeight="440.0" prefWidth="418.0" style="-fx-background-radius: 12 12 12 12; -fx-background-color: #757575;">
                <graphic>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
+                  <VBox prefHeight="200.0" prefWidth="401.0">
                      <children>
                         <HBox prefHeight="64.0" prefWidth="402.0">
                            <children>
@@ -173,7 +173,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <TextField prefHeight="30.0" prefWidth="176.0">
+                                    <TextField fx:id="FirstNameTF" prefHeight="30.0" prefWidth="176.0">
                                        <VBox.margin>
                                           <Insets bottom="5.0" right="7.5" />
                                        </VBox.margin>
@@ -205,7 +205,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <TextField prefHeight="30.0" prefWidth="176.0">
+                                    <TextField fx:id="LastNameTF" prefHeight="30.0" prefWidth="176.0">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="7.5" />
                                        </VBox.margin>
@@ -227,7 +227,7 @@
                                     <Insets left="15.0" top="15.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField prefHeight="30.0" prefWidth="176.0">
+                              <TextField fx:id="EmailTF" disable="true" prefHeight="30.0" prefWidth="176.0">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="15.0" right="15.0" />
                                  </VBox.margin>
@@ -256,7 +256,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <TextField prefHeight="30.0" prefWidth="176.0">
+                              <TextField fx:id="PhoneNumberTF" prefHeight="30.0" prefWidth="176.0">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="15.0" right="15.0" />
                                  </VBox.margin>
@@ -285,28 +285,49 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <TextField prefHeight="30.0" prefWidth="176.0">
+                              <TextField fx:id="NIDTF" prefHeight="30.0" prefWidth="176.0">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="15.0" right="15.0" />
                                  </VBox.margin>
                               </TextField>
                            </children>
                         </VBox>
-                        <VBox prefHeight="123.0" prefWidth="402.0">
+                        <VBox prefHeight="67.0" prefWidth="402.0">
                            <children>
-                              <Label prefHeight="22.0" prefWidth="61.0" text="Address" textFill="WHITE">
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="54.0" text="Unique ID" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="9.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="22.0" prefWidth="19.0" text="*" textFill="RED">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="UIDTF" disable="true" prefHeight="30.0" prefWidth="176.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="118.0" prefWidth="401.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="361.0" text="Use valid information, otherwise your account will be ban." textFill="#dd2a2a">
                                  <font>
-                                    <Font name="Arial" size="9.0" />
+                                    <Font name="Arial Hebrew" size="14.0" />
                                  </font>
-                                 <VBox.margin>
-                                    <Insets left="15.0" top="15.0" />
-                                 </VBox.margin>
                               </Label>
-                              <TextArea prefHeight="200.0" prefWidth="200.0">
-                                 <VBox.margin>
-                                    <Insets left="15.0" right="15.0" top="5.0" />
-                                 </VBox.margin>
-                              </TextArea>
                            </children>
                         </VBox>
                      </children>
@@ -315,7 +336,7 @@
             </Button>
          </children>
       </VBox>
-      <Button layoutX="58.0" layoutY="518.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="208.0" style="-fx-background-color: rgb(39,174,96);" text="Save" textFill="WHITE">
+      <Button layoutX="58.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleSaveBtn" prefHeight="19.0" prefWidth="208.0" style="-fx-background-color: rgb(39,174,96);" text="Save" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="21.0" />
          </font>
