@@ -334,7 +334,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="242.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="217.0" style="-fx-background-color: Transparent;" />
+                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="217.0" style="-fx-background-color: Transparent;  " />
                </children>
                <padding>
                   <Insets left="33.0" />
