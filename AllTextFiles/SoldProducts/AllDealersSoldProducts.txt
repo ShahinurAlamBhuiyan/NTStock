@@ -1,3 +1,5 @@
+Coca-cola 999999 90 30 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
 Rice 87654 150 70 10500 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Potato 00000 20 6443 128860 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
 Sugar 5432 110 45 4950 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
+Potato 00000 20 6443 128860 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
+Sprite-Drinks 909090 60 20 1200 mainR@gmail.com 8938351 nurD@gmail.com 7320245 NurD hasib 2022-12-20

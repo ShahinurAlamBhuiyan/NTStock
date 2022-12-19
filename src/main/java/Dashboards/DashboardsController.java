@@ -171,7 +171,6 @@ public class DashboardsController {
 
     @FXML
     void handleShowProfileBtn(ActionEvent event){
-        System.out.println("clicked");
         try{
             Pane p = FXMLLoader.load(getClass().getResource("UsersProfile.fxml"));
             MainBorderPane.setCenter(p);

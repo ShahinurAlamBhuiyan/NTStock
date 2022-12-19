@@ -4,20 +4,30 @@ import static Slides.SlideOne.SlideOne.loggedInUserEmail;
 import static Slides.SlideOne.SlideOne.loggedInUserID;
 
 public class SoldProductInformation {
-    private final String productName;
-    private final String productId;
-    private final String productPerPrice;
-    private final String productQuantity;
-    private final String productTotalPrice;
+    private  String productName;
+    private  String productId;
+    private  String productPerPrice;
+    private  String productQuantity;
+    private  String productTotalPrice;
 
-    private final String retailerId;
-    private final String retailerEmail;
+    private  String retailerId;
+    private  String retailerEmail;
     private String dealerEmail;
     private String dealerId;
-    private final String dealerName;
-    private final String buyingDate;
+    private  String dealerName;
+    private  String buyingDate;
 
-    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice,  String retailerEmail,String retailerId,  String dealerEmail,String dealerId,String dealerFirstName,String dealerLastName, String buyingDate) {
+    @Override
+    public String toString() {
+        return "SoldProductInformation{" +
+                "productName='" + productName + '\'' +
+                ", productId='" + productId + '\'' +
+                ", productPerPrice='" + productPerPrice + '\'' +
+                ", productQuantity='" + productQuantity + '\'' +
+                '}';
+    }
+
+    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice, String retailerEmail, String retailerId, String dealerEmail, String dealerId, String dealerFirstName, String dealerLastName, String buyingDate) {
         this.productName = productName;
         this.productId = productId;
         this.productPerPrice = productPerPrice;
@@ -81,5 +91,41 @@ public class SoldProductInformation {
 
     public String getBuyingDate() {
         return buyingDate;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public void setProductPerPrice(String productPerPrice) {
+        this.productPerPrice = productPerPrice;
+    }
+
+    public void setProductQuantity(String productQuantity) {
+        this.productQuantity = productQuantity;
+    }
+
+    public void setProductTotalPrice(String productTotalPrice) {
+        this.productTotalPrice = productTotalPrice;
+    }
+
+    public void setRetailerId(String retailerId) {
+        this.retailerId = retailerId;
+    }
+
+    public void setRetailerEmail(String retailerEmail) {
+        this.retailerEmail = retailerEmail;
+    }
+
+    public void setDealerName(String dealerName) {
+        this.dealerName = dealerName;
+    }
+
+    public void setBuyingDate(String buyingDate) {
+        this.buyingDate = buyingDate;
     }
 }
