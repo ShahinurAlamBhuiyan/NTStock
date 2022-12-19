@@ -51,3 +51,4 @@ public class SingleProductsController {
         retailerName.setText("Retailer: "+ retailers.get(0).getFirstName()+ " "+retailers.get(0).getLastName());
     }
 }
+// merge with main
