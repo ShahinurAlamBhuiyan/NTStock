@@ -4,3 +4,4 @@ johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-1
 johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948 * *
 mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351 * *
 shahinC@gmail.com shahinC@gmail.com Customer Shahin BhuiyanC Male 2022-12-10 2022-12-10 5110649 * * 
+customer1@gmail.com customer1@gmail.com Customer Customer01 lastName Male 2023-01-07 2022-12-19 71855 * * 
