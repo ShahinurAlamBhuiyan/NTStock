@@ -103,5 +103,19 @@ public class UserInformation {
         this.creatingTime = creatingTime;
     }
 
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
 
+    public void setNidNo(String nidNo) {
+        this.nidNo = nidNo;
+    }
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
+    public String getNidNo() {
+        return nidNo;
+    }
 }
