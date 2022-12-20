@@ -3,3 +3,4 @@ johnD@gmail.com johnD@gmail.com Dealer John Dealer Male 2022-12-10 2022-12-10 22
 johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-10 5133280
 johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948
 mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351
+asif@gmail.com asif Administrator Asif  Iqbal Male 2005-12-15 2022-12-10 824030
