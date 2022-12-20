@@ -107,7 +107,7 @@
             <Insets left="5.0" top="5.0" />
          </padding>
       </VBox>
-      <Button mnemonicParsing="false" onAction="#handleAddToCart" style="-fx-background-color: green;" text="Add to Cart" textFill="WHITE">
+      <Button mnemonicParsing="false" onAction="#handleAddToCart" style="-fx-background-color: green;" text="Buy now" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="13.0" />
          </font>
