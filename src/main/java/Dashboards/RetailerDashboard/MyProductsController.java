@@ -29,8 +29,6 @@ public class MyProductsController implements Initializable {
 
     @FXML
     private TableView<SoldProductInformation> MyProductsTable;
-    @FXML
-    private Button BgButton;
 
     @FXML
     private TableColumn<SoldProductInformation, String> BuyingDate;
@@ -41,6 +39,8 @@ public class MyProductsController implements Initializable {
 
     @FXML
     private TableColumn<SoldProductInformation, String> ProductName;
+    @FXML
+    private TableColumn<SoldProductInformation, String> DealerName;
 
     @FXML
     private TableColumn<SoldProductInformation, String> ProductPerPrice;
@@ -62,7 +62,7 @@ public class MyProductsController implements Initializable {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(SoldProductInformation product : productsInfo){
                 if(product.getRetailerEmail().equals(loggedInUserEmail) && product.getRetailerId().equals(loggedInUserID)){
@@ -86,18 +86,8 @@ public class MyProductsController implements Initializable {
         ProductQuantity.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productQuantity"));
         Total.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productTotalPrice"));
         BuyingDate.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("buyingDate"));
+        DealerName.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("dealerName"));
 
         MyProductsTable.setItems(productsList);
     }
 }
-
-
-
-//              FXMLScene  scene = FXMLScene.load("/Dashboards/Dashboards.fxml");
-//                } catch (IOException e) {
-//                throw new RuntimeException(e);
-//                }
-//                Parent root = scene.root;
-//                // sending data for dashboard. --------------------------------
-//                DashboardsController dashboardsController = (DashboardsController) scene.controller;
-//                System.out.println("init" + dashboardsController.getUserEmail());

@@ -96,12 +96,12 @@ public class SignUpController implements Initializable {
                                             FileWriter writer1 = new FileWriter(singleUserFilePath, true);
                                             writer1.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+"\n");
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+" "+ "*" + " "+"*" + " " +"\n");
 
                                             FileWriter writer2 = new FileWriter(AllUserPath, true);
                                             writer2.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+ "\n");
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+" "+ "*" + " "+"*" + " " +"\n");
                                             writer1.close();
                                             writer2.close();
                                             System.out.println("Add successfully");

@@ -1,12 +1,7 @@
 package Auths.SignIn;
 
 
-import Dashboards.AdministratorDashboard.AdministratorDashboardController;
-
-import Dashboards.CustomerDashboard.CustomerDashboardController;
 import Dashboards.DashboardsController;
-import Dashboards.DealerDashboard.DealerDashboardController;
-import Dashboards.RetailerDashboard.RetailerDashboardController;
 import Auths.SignUp.SignUpController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,7 +73,7 @@ public class SignInController {
 
                         while(fileReader.hasNext())
                         {
-                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                            usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
                         }
 
                         for(UserInformation user : usersInfo){
