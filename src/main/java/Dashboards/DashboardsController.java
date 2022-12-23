@@ -222,9 +222,29 @@ public class DashboardsController {
     @FXML
     void AHandleComplainsBtn(ActionEvent event) {}
     @FXML
-    void AHandleProPriceBtn(ActionEvent event) {}
+    void AHandleProPriceBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/ProductPricing.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
-    void AHandleProductListBtn(ActionEvent event) {}
+    void AHandleProductListBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/AllProducts.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void RHandleDealersListBtn(ActionEvent event) {}

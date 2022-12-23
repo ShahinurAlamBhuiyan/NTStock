@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.AdministratorDashboard.AllProductsController">
    <children>
       <Button fx:id="BgButton" disable="true" layoutX="47.0" layoutY="57.0" mnemonicParsing="false" opacity="0.37" prefHeight="497.0" prefWidth="895.0" style="-fx-background-radius: 15 15 15 15; -fx-background-color: #2CCF6F;" />
       <TableView fx:id="AllProductsTable" layoutX="82.0" layoutY="136.0" maxHeight="480.0" prefHeight="385.0" prefWidth="820.0" style="-fx-background-color: Transparent;">
          <columns>
-            <TableColumn fx:id="ProductID" maxWidth="350.0" minWidth="74.00840759277344" prefWidth="78.06307983398438" style="-fx-background-color: Transparent;" text="Product ID" />
-            <TableColumn fx:id="ProductsName" maxWidth="517.9915924072266" minWidth="102.03604125976562" prefWidth="205.8446044921875" style="-fx-background-color: Transparent;" text="Product Name" />
-            <TableColumn fx:id="ProductDetails" maxWidth="454.00689697265625" minWidth="128.6282958984375" prefWidth="287.2187194824219" style="-fx-background-color: Transparent;" text="Product Details" />
+            <TableColumn fx:id="ProductID" maxWidth="350.0" minWidth="74.00840759277344" prefWidth="120.5" style="-fx-background-color: Transparent;" text="Product ID" />
+            <TableColumn fx:id="ProductsName" maxWidth="517.9915924072266" minWidth="102.03604125976562" prefWidth="205.0" style="-fx-background-color: Transparent;" text="Product Name" />
+            <TableColumn fx:id="RetailerName" maxWidth="454.00689697265625" minWidth="128.6282958984375" prefWidth="246.5" style="-fx-background-color: Transparent;" text="Retailer Name" />
             <TableColumn fx:id="ProductQuantity" maxWidth="362.2352294921875" minWidth="83.94610595703125" prefWidth="122.7813720703125" style="-fx-background-color: Transparent;" text="Quantity" />
-            <TableColumn fx:id="ProductQuantityProductPrice1" maxWidth="362.2352294921875" minWidth="83.94610595703125" prefWidth="124.90625" style="-fx-background-color: Transparent;" text="Price" />
+            <TableColumn fx:id="ProductPrice" maxWidth="362.2352294921875" minWidth="83.94610595703125" prefWidth="124.90625" style="-fx-background-color: Transparent;" text="Price" />
          </columns>
       </TableView>
       <Label layoutX="84.0" layoutY="80.0" prefHeight="39.0" prefWidth="586.0" text="This table contains all products" textFill="WHITE">

@@ -9,3 +9,4 @@ customer1@gmail.com customer1@gmail.com Customer Customer01 lastName Male 2023-0
 customer1@gmail.com customer1@gmail.com Customer Customer01 lastName Male 2023-01-07 2022-12-19 71855 * * 
 nurD@gmail.com nurD@gmail.com Dealer NurD hasib Male 2016-12-23 2022-12-20 7320245 * * 
 nurR@gmail.com nurR@gmail.com Retailer nurR retailer Male 2022-12-31 2022-12-20 8489862 * * 
+nomanR@gmail.com nomanR@gmail.com Retailer NomanR Akanda Others 2022-12-16 2022-12-23 6222736 * * 
