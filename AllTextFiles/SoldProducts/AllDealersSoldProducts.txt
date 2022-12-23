@@ -1,8 +1,8 @@
 Coca-cola-drinks 999999 25 30 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
 Rice 87654 150 70 10500 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Nafis-Drink 909090 44 20 1200 johnR@gmail.com 6558726 nurD@gmail.com 7320245 NurD hasib 2022-12-20
+Sprite-Drink 909090 40 20 1200 johnR@gmail.com 6558726 nurD@gmail.com 7320245 NurD hasib 2022-12-20
 Sugar-white 5432 100 45 4950 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Nafis-Drink 909090 44 20 1200 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
+Sprite-Drink 909090 40 20 1200 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
 Potato 00000 20 6443 128860 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Nafis-Drink 909090 44 20 1200 mainR@gmail.com 8938351 nurD@gmail.com 7320245 NurD hasib 2022-12-20
+Sprite-Drink 909090 40 20 1200 mainR@gmail.com 8938351 nurD@gmail.com 7320245 NurD hasib 2022-12-20
 Coca-cola-drinks 999999 25 30 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
