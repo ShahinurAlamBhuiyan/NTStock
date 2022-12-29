@@ -59,7 +59,7 @@ public class AllDealersController implements Initializable {
         getAllDealers();
         DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
         DealerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
-        DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
+        DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("contactNo"));
 
 
         AllDealersTable.setItems(dealerListR);

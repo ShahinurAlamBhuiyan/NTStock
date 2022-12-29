@@ -3,6 +3,7 @@ package Dashboards.AdministratorDashboard;
 import Dashboards.SoldProductInformation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.File;
@@ -64,5 +65,12 @@ public class ProductPricingController {
             FileWriter writer = new FileWriter("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
             writer.write(newLine);
             writer.close();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Updated!");
+        alert.setContentText("Product updated successfully.");
+        alert.showAndWait();
+        productNameTF.setText(null);
+        ProductPriceTF.setText(null);
+        searchProductTF.setText(null);
     }
 }

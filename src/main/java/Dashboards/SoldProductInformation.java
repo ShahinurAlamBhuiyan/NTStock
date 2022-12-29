@@ -1,5 +1,11 @@
 package Dashboards;
 
+import Auths.SignIn.UserInformation;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import static Slides.SlideOne.SlideOne.loggedInUserEmail;
 import static Slides.SlideOne.SlideOne.loggedInUserID;
 
@@ -12,9 +18,11 @@ public class SoldProductInformation {
 
     private  String retailerId;
     private  String retailerEmail;
+    private String retailerName;
     private String dealerEmail;
     private String dealerId;
     private  String dealerName;
+
     private  String buyingDate;
 
     @Override
@@ -39,6 +47,24 @@ public class SoldProductInformation {
         this.dealerEmail = dealerEmail;
         this.dealerId = dealerId;
         dealerName = dealerFirstName + " " + dealerLastName;
+        ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
+        try{
+            File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+            Scanner fileReader = new Scanner(file);
+            while(fileReader.hasNext())
+            {
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+            }
+            for(UserInformation user : usersInfo){
+                if(user.getUserRandomId().equals(retailerId) && user.getEmail().equals(retailerEmail)){
+                    this.retailerName = user.getFirstName()+" "+user.getLastName();
+                    break;
+                }
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public String getProductName() {
@@ -68,6 +94,8 @@ public class SoldProductInformation {
     public String getRetailerEmail() {
         return retailerEmail;
     }
+
+    public String getRetailerName() {return retailerName;}
 
     public String getDealerEmail() {
         return dealerEmail;

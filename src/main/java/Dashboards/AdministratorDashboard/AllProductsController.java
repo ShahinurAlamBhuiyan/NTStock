@@ -55,9 +55,7 @@ public class AllProductsController  implements Initializable {
                 productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(SoldProductInformation product : productsInfo){
-//                if(user.getRole().equals("Dealer")){
                     productListR.add(product);
-//                }
             }
             TotalProductLabel.setText("Total Products: "+ productListR.size());
 
@@ -71,7 +69,7 @@ public class AllProductsController  implements Initializable {
         getAllProducts();
         ProductID.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productId"));
         ProductsName.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productName"));
-        RetailerName.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("retailerId"));
+        RetailerName.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("retailerName"));
         ProductQuantity.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productQuantity"));
         ProductPrice.setCellValueFactory(new PropertyValueFactory<SoldProductInformation, String>("productPerPrice"));
 
