@@ -11,14 +11,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -40,27 +43,47 @@ public class SingleProductsController {
     private Label retailerName;
     private String productId;
     private String retailerEmail;
+    List<SoldProductInformation> matchedProducts = new ArrayList<SoldProductInformation>();
     @FXML
     void handleAddToCart(ActionEvent event) throws IOException {
-        try {
-            FXMLScene scene = FXMLScene.load("/Dashboards/CustomerDashboard/ProductDetails.fxml");
-            Parent root = scene.root;
-            // sending data for dashboard. --------------------------------
-            ProductDetailsController productDetailsController = (ProductDetailsController) scene.controller;
-            productDetailsController.setInformation(productId, retailerEmail);
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("NTStock");
-            stage.show();
-
-        } catch (Exception e) {
+        List<SoldProductInformation> allProducts = new ArrayList<SoldProductInformation>();
+        try{
+            File file  = new File("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
+            Scanner fileReader = new Scanner(file);
+            while(fileReader.hasNext())
+            {
+                allProducts.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+            }
+        }catch (Exception e){
             e.printStackTrace();
         }
-    }
 
-    @FXML
-    void handleViewDetails(ActionEvent event) {
+        int i = 0;
+        while(allProducts.size() > 0){
+            if(allProducts.get(i).getProductId().equals(productId) && allProducts.get(i).getRetailerEmail().equals(retailerEmail)){
+                matchedProducts.add(allProducts.get(i));
+                break;
+            }
+            i++;
+        }
 
+        File file = new File("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
+        Scanner readers = new Scanner(file);
+        String newLine="";
+        while(readers.hasNext()){
+            String line = readers.nextLine();
+            if(line.contains(matchedProducts.get(0).getProductId()) && line.contains(matchedProducts.get(0).getProductName())){
+                line =  line.replace(matchedProducts.get(0).getProductQuantity(), String.valueOf(Integer.parseInt(matchedProducts.get(0).getProductQuantity())-1));
+            }
+            newLine =newLine+ line+"\n";
+        }
+        FileWriter writer = new FileWriter("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
+        writer.write(newLine);
+        writer.close();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Purchased!");
+        alert.setContentText("Product purchased successfully.");
+        alert.showAndWait();
     }
     public void setData(SoldProductInformation soldProductInformation){
             ArrayList<UserInformation> retailers = new ArrayList<>();
@@ -84,4 +107,3 @@ public class SingleProductsController {
         this.retailerEmail = soldProductInformation.getRetailerEmail();
     }
 }
-// merge with main

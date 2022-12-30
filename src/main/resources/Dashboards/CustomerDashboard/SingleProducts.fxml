@@ -111,14 +111,6 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="46.0" prefWidth="178.0" spacing="28.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleViewDetails" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: green;" text="Details" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <Button mnemonicParsing="false" onAction="#handleAddToCart" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: green;" text="Buy now" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="13.0" />
