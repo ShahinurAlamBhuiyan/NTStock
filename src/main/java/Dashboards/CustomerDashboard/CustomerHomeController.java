@@ -110,6 +110,9 @@ public class CustomerHomeController implements Initializable {
             long diffMinutes = difference / (60 * 1000) % 60;
             long diffHours = difference / (60 * 60 * 1000) % 24;
             long diffDays = difference / (24 * 60 * 60 * 1000);
+            if(diffMinutes < 0){
+                diffMinutes = diffMinutes*(-1);
+            }
 
             System.out.print(diffDays + " days, ");
             System.out.print(diffHours + " hours, ");
