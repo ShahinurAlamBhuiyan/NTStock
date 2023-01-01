@@ -1,10 +1,8 @@
 package Dashboards;
 import Auths.SignIn.*;
-import Dashboards.RetailerDashboard.MyProductsController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,11 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.EventObject;
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class DashboardsController {
@@ -222,7 +216,17 @@ public class DashboardsController {
         }
     }
     @FXML
-    void AHandleComplainsBtn(ActionEvent event) {}
+    void AHandleComplainsBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/ComplainBoxContainer.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void AHandleStockerListBtn(ActionEvent event) {
         try {
@@ -287,9 +291,29 @@ public class DashboardsController {
         }
     }
     @FXML
-    void DHandleRetailersListBtn(ActionEvent event) {}
+    void DHandleRetailersListBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/MyTransactions.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
-    void DHandleMyProductsBtn(ActionEvent event) {}
+    void DHandleMyProductsBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/DealerDashboard/MyProducts.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     // merge with shahin
 
     @FXML
@@ -307,3 +331,5 @@ public class DashboardsController {
 
 
 }
+
+// merge with main
