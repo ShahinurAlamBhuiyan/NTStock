@@ -155,12 +155,7 @@
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="52.0" layoutY="447.0" prefHeight="31.0" prefWidth="559.0" text="Fight against price-hiking and food stocking." textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="19.0" />
-               </font>
-            </Label>
-            <Label layoutX="52.0" layoutY="336.0" prefHeight="31.0" prefWidth="559.0" text="and food stocking." textFill="WHITE">
+            <Label layoutX="52.0" layoutY="336.0" prefHeight="31.0" prefWidth="559.0" text="and illegal food stocking." textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="38.0" />
                </font>

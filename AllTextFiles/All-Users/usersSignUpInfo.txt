@@ -11,3 +11,4 @@ nurD@gmail.com nurD@gmail.com Dealer NurD hasib Male 2016-12-23 2022-12-20 73202
 nurR@gmail.com nurR@gmail.com Retailer nurR retailer Male 2022-12-31 2022-12-20 8489862 * * true
 nomanR@gmail.com nomanR@gmail.com Retailer NomanR Akanda Others 2022-12-16 2022-12-23 6222736 * * true
 leoR@gmail.com leoR@gmail.com Retailer LeoR Messi Male 2023-01-25 2023-01-01 9288583 * * false
+amitD@gmail.com amitD@gmail.com Dealer AmitD Sabbir Male 2023-01-12 2023-01-02 9646456 * * false
