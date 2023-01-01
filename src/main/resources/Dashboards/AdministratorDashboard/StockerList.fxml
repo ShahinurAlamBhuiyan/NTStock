@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.AdministratorDashboard.AllRetailersController">
+<AnchorPane prefHeight="598.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.AdministratorDashboard.StockerListController">
    <children>
       <Button fx:id="BgButton" disable="true" layoutX="46.0" layoutY="47.0" mnemonicParsing="false" opacity="0.57" prefHeight="497.0" prefWidth="895.0" style="-fx-background-radius: 15 15 15 15; -fx-background-color: red;" />
-      <TableView fx:id="AllRetailersTable" layoutX="90.0" layoutY="126.0" maxHeight="480.0" prefHeight="385.0" prefWidth="820.0" style="-fx-background-color: Transparent;">
+      <TableView fx:id="AllStockersTable" layoutX="90.0" layoutY="126.0" maxHeight="480.0" prefHeight="385.0" prefWidth="820.0" style="-fx-background-color: Transparent;">
          <columns>
-            <TableColumn fx:id="RetailerName" maxWidth="350.0" minWidth="151.0" prefWidth="197.0" style="-fx-background-color: Transparent;" text="Stockers Name" />
-            <TableColumn fx:id="RetailerAddress" maxWidth="349.0" minWidth="102.03604125976562" prefWidth="175.0" style="-fx-background-color: Transparent;" text="U-ID" />
-            <TableColumn fx:id="RetailerContact" maxWidth="445.0" minWidth="213.0" prefWidth="246.0" style="-fx-background-color: Transparent;" text="Mailing Address" />
-            <TableColumn fx:id="RetailerContact1" maxWidth="445.0" minWidth="196.0" prefWidth="201.0" style="-fx-background-color: Transparent;" text="Contact" />
+            <TableColumn fx:id="StockerName" maxWidth="350.0" minWidth="151.0" prefWidth="197.0" style="-fx-background-color: Transparent;" text="Stockers Name" />
+            <TableColumn fx:id="StockerUID" maxWidth="349.0" minWidth="102.03604125976562" prefWidth="175.0" style="-fx-background-color: Transparent;" text="UID" />
+            <TableColumn fx:id="StockerAddress" maxWidth="445.0" minWidth="213.0" prefWidth="246.0" style="-fx-background-color: Transparent;" text="Mailing Address" />
+            <TableColumn fx:id="StockerContact" maxWidth="445.0" minWidth="196.0" prefWidth="201.0" style="-fx-background-color: Transparent;" text="Contact" />
          </columns>
       </TableView>
-      <Label fx:id="TotalRetailerLabel" layoutX="694.0" layoutY="70.0" prefHeight="39.0" prefWidth="250.0" text="Total Stockers: 00" textFill="WHITE">
+      <Label fx:id="TotalStockerLabel" layoutX="694.0" layoutY="70.0" prefHeight="39.0" prefWidth="250.0" text="Total Stockers: 00" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>

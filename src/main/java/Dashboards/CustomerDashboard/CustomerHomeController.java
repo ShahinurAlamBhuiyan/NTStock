@@ -1,5 +1,6 @@
 package Dashboards.CustomerDashboard;
 
+import Auths.SignIn.UserInformation;
 import Dashboards.SoldProductInformation;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -38,7 +42,6 @@ public class CustomerHomeController implements Initializable {
                     column = 0;
                     ++row;
                 }
-
                 productContainer.add(productBox, column++, row);
                 GridPane.setMargin(productBox, new Insets(15));
             }
@@ -66,15 +69,39 @@ public class CustomerHomeController implements Initializable {
             }
         return products;
     }
+    void updateAllUsers(String retailerEmail, String retailerId, long difference) {
+        try{
+        File file = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+        Scanner readers = new Scanner(file);
+        String newLine="";
+        while(readers.hasNext()){
+            String line = readers.nextLine();
+            if(line.contains(retailerEmail) && line.contains(retailerId)){
+                if(difference > 7) {
+                    line = line.replace("false", "true");
+                }else{
+                    line = line.replace("true", "false");
+                }
+            }
+            newLine =newLine+ line+"\n";
+        }
+        FileWriter writer = new FileWriter("AllTextFiles/All-Users/usersSignUpInfo.txt");
+        writer.write(newLine);
+        writer.close();
 
-    void isStocker() throws ParseException {
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void isStocker() throws ParseException {
         for(int i = 0; i < products.size(); i++){
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
             String currentTime = dtf.format(now);
             String time1 = products.get(i).getPrevSellTime();
             String time2 = currentTime;
-//
+
             SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
             Date date1 = format.parse(time1);
             Date date2 = format.parse(time2);
@@ -88,9 +115,7 @@ public class CustomerHomeController implements Initializable {
             System.out.print(diffHours + " hours, ");
             System.out.print(diffMinutes + " minutes, ");
             System.out.println(diffSeconds + " seconds.");
-            if(diffMinutes > 7){
-                System.out.println("Notifications will send to Administrator.");
-            }
+            updateAllUsers(products.get(i).getRetailerEmail(), products.get(i).getRetailerId(), diffMinutes);
         }
     }
 

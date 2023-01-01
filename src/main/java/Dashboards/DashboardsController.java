@@ -30,6 +30,8 @@ public class DashboardsController {
     @FXML
     private VBox AdministratorSidebar;
     @FXML
+    private Button AStockerListBtn;
+    @FXML
     private Button AAllDealersBtn;
     @FXML
     private Button AAllRetailersListBtn;
@@ -125,7 +127,7 @@ public class DashboardsController {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
                 UserNameLebel.setText(user.getFirstName() + " "+ user.getLastName());
@@ -221,6 +223,18 @@ public class DashboardsController {
     }
     @FXML
     void AHandleComplainsBtn(ActionEvent event) {}
+    @FXML
+    void AHandleStockerListBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/StockerList.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void AHandleProPriceBtn(ActionEvent event) {
         try {
