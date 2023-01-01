@@ -59,8 +59,7 @@ public class MyTransactionsController implements Initializable {
                 productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next()));
             }
             for(SoldProductInformation product : productsInfo){
-                if(product.getDealerEmail().equals(loggedInUserEmail))
-                productListR.add(product);
+                if(product.getDealerEmail().equals(loggedInUserEmail)) productListR.add(product);
             }
             TotalTransactionsLabel.setText("Total Transactions: "+ productListR.size());
         }catch(Exception e){
