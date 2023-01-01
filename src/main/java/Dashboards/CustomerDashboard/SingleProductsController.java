@@ -20,6 +20,9 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +47,16 @@ public class SingleProductsController {
     private String productId;
     private String retailerEmail;
     List<SoldProductInformation> matchedProducts = new ArrayList<SoldProductInformation>();
+
+    void handleUpdateStockerMethod() throws IOException, ParseException {
+        // Updating method...
+        FXMLScene scene = FXMLScene.load("/Dashboards/CustomerDashboard/CustomerHome.fxml");
+        CustomerHomeController customerHomeController = (CustomerHomeController) scene.controller;
+        customerHomeController.isStocker();
+    }
     @FXML
-    void handleAddToCart(ActionEvent event) throws IOException {
+    void handleAddToCart(ActionEvent event) throws IOException, ParseException {
+        handleUpdateStockerMethod();
         List<SoldProductInformation> allProducts = new ArrayList<SoldProductInformation>();
         try{
             File file  = new File("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
@@ -73,7 +84,11 @@ public class SingleProductsController {
         while(readers.hasNext()){
             String line = readers.nextLine();
             if(line.contains(matchedProducts.get(0).getProductId()) && line.contains(matchedProducts.get(0).getProductName())){
-                line =  line.replace(matchedProducts.get(0).getProductQuantity(), String.valueOf(Integer.parseInt(matchedProducts.get(0).getProductQuantity())-1));
+                line =  line.replace(matchedProducts.get(0).getProductQuantity()+" ", String.valueOf(Integer.parseInt(matchedProducts.get(0).getProductQuantity())-1)+" ");
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+                LocalDateTime now = LocalDateTime.now();
+                String currentTime = dtf.format(now);
+                line = line.replace(matchedProducts.get(0).getPrevSellTime(), currentTime);
             }
             newLine =newLine+ line+"\n";
         }
