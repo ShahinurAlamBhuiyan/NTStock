@@ -1,5 +1,5 @@
 Coca-cola 999999 22 28 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
-Rice 87654 150 65 10500 johnR@gmail.com 6558726 johnD@gmail.com 222659 John Dealer 2022-12-10 11:11:13
+Rice 87644 150 64 10500 johnR@gmail.com 6458726 johnD@gmail.com 222649 John Dealer 2022-12-10 11:11:13
 Merinda-drink 909090 40 20 1200 johnR@gmail.com 6558726 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
 Sugar-white 5432 100 45 4950 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10 11:11:13
 Merinda-drink 909090 40 20 1200 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13

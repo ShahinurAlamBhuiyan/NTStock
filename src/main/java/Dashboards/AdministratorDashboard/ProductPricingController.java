@@ -74,3 +74,4 @@ public class ProductPricingController {
         searchProductTF.setText(null);
     }
 }
+// merge with shahin branch
