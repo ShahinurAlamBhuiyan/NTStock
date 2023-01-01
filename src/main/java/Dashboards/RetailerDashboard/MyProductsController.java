@@ -62,7 +62,7 @@ public class MyProductsController implements Initializable {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next()));
             }
             for(SoldProductInformation product : productsInfo){
                 if(product.getRetailerEmail().equals(loggedInUserEmail) && product.getRetailerId().equals(loggedInUserID)){

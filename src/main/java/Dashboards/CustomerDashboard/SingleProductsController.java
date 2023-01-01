@@ -52,7 +52,7 @@ public class SingleProductsController {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                allProducts.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                allProducts.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next() ,fileReader.next()));
             }
         }catch (Exception e){
             e.printStackTrace();
