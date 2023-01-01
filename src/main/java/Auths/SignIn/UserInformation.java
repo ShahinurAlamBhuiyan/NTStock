@@ -12,9 +12,11 @@ public class UserInformation {
     private String birthday;
     private String creatingTime;
     private String userRandomId;
+    private String contactNo;
+    private String nidNo;
 
 
-    public UserInformation(String email, String password, String role, String firstName, String lastName, String gender, String birthday,  String creatingTime, String userRandomId) {
+    public UserInformation(String email, String password, String role, String firstName, String lastName, String gender, String birthday,  String creatingTime, String userRandomId, String contactNo, String nidNo) {
         this.email = email;
         this.password = password;
         this.role = role;
@@ -25,13 +27,8 @@ public class UserInformation {
         this.birthday = birthday;
         this.creatingTime = creatingTime;
         this.userRandomId = userRandomId;
-    }
-
-    public UserInformation(String firstName, String lastName, String email, String birthday) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.birthday = birthday;
+        this.contactNo = contactNo;
+        this.nidNo = nidNo;
     }
 
     public String getEmail() {
@@ -106,5 +103,19 @@ public class UserInformation {
         this.creatingTime = creatingTime;
     }
 
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
 
+    public void setNidNo(String nidNo) {
+        this.nidNo = nidNo;
+    }
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
+    public String getNidNo() {
+        return nidNo;
+    }
 }

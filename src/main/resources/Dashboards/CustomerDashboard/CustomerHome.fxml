@@ -1,346 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboards.CustomerDashboard.CustomerHomeController">
 
    <children>
-      <VBox layoutX="766.0" layoutY="50.0" opacity="0.54" prefHeight="284.0" prefWidth="225.0" style="-fx-background-color: #142521;">
-         <children>
-            <Pane prefHeight="56.0" prefWidth="241.0">
-               <children>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/icons/male-user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="70.0" layoutY="13.0" text="Bahadur Shah" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="74.0" layoutY="32.0" prefHeight="6.0" prefWidth="106.0" text="Modhumoti Enterprise" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Italic" size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane prefHeight="56.0" prefWidth="241.0">
-               <children>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/icons/male-user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="70.0" layoutY="13.0" text="Sabbir Hossain" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="74.0" layoutY="32.0" prefHeight="6.0" prefWidth="106.0" text="M/S Sabbir " textFill="WHITE">
-                     <font>
-                        <Font name="Arial Italic" size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane prefHeight="56.0" prefWidth="241.0">
-               <children>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/icons/male-user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="70.0" layoutY="13.0" text="Azizul Asad" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="74.0" layoutY="32.0" prefHeight="6.0" prefWidth="106.0" text="A1 Store" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Italic" size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane prefHeight="56.0" prefWidth="241.0">
-               <children>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/icons/male-user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="70.0" layoutY="13.0" text="Fahad Wasi" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="74.0" layoutY="32.0" prefHeight="6.0" prefWidth="106.0" text="Tea Provider" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Italic" size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane prefHeight="56.0" prefWidth="241.0">
-               <children>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/icons/male-user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="70.0" layoutY="13.0" text="Riyad Hossain" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="74.0" layoutY="32.0" prefHeight="6.0" prefWidth="106.0" text="Riyad Super Shop" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Italic" size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-         </children>
-      </VBox>
-      <Label layoutX="766.0" layoutY="14.0" text="Recents" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="22.0" />
-         </font>
-      </Label>
-      <Separator layoutX="861.0" layoutY="28.0" prefHeight="0.0" prefWidth="53.0" />
-      <ImageView fitHeight="135.0" fitWidth="744.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="135.0" fitWidth="888.0" layoutX="21.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Image/Banner01.png" />
          </image>
       </ImageView>
-      <Label layoutX="20.0" layoutY="150.0" text="Daily Deals" textFill="WHITE">
+      <Label layoutX="18.0" layoutY="170.0" prefHeight="26.0" prefWidth="132.0" text="Your needs" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
       </Label>
-      <Separator layoutX="148.0" layoutY="163.0" prefHeight="0.0" prefWidth="53.0" />
-      <HBox layoutY="183.0" prefHeight="135.0" prefWidth="745.0">
+      <Separator layoutX="146.0" layoutY="175.0" prefHeight="12.0" prefWidth="53.0" />
+      <VBox layoutX="17.0" layoutY="203.0" prefHeight="357.0" prefWidth="939.0">
          <children>
-            <VBox prefHeight="150.0" prefWidth="148.0">
-               <children>
-                  <ImageView fitHeight="124.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_7.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Listerine" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="19.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="150.0" prefWidth="148.0">
-               <children>
-                  <ImageView fitHeight="124.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_6.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Dettol Soap" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="19.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="150.0" prefWidth="148.0">
-               <children>
-                  <ImageView fitHeight="124.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_4.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Pringles" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="19.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="150.0" prefWidth="148.0">
-               <children>
-                  <ImageView fitHeight="124.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_5.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Cocos" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="19.0" />
-               </padding>
-            </VBox>
+            <ScrollPane prefHeight="357.0" prefWidth="937.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="productContainer" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: rgb(31,113,63);">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
          </children>
-      </HBox>
-      <HBox layoutY="374.0" prefHeight="185.0" prefWidth="992.0">
-         <children>
-            <VBox prefHeight="185.0" prefWidth="220.0">
-               <children>
-                  <ImageView fitHeight="156.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_13.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Riyad Super Shop" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="22.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="185.0" prefWidth="220.0">
-               <children>
-                  <ImageView fitHeight="156.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_8.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Vagitable Shop" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="22.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="185.0" prefWidth="220.0">
-               <children>
-                  <ImageView fitHeight="156.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_11.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Ahnaf Departmental" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="22.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="185.0" prefWidth="220.0">
-               <children>
-                  <ImageView fitHeight="156.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Image/Screenshot_9.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="Moshla Ghor" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="22.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-         </children>
-      </HBox>
-      <Button layoutX="400.0" layoutY="559.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="193.0" style="-fx-background-color: transparent;" text="⮟" />
-      <Label layoutX="21.0" layoutY="334.0" text="Top Sellers" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="22.0" />
-         </font>
-      </Label>
-      <Separator layoutX="153.0" layoutY="348.0" prefHeight="0.0" prefWidth="53.0" />
-      <HBox layoutX="-3.0" layoutY="373.0" prefHeight="185.0" prefWidth="998.0">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="243.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="228.0" style="-fx-background-color: Transparent;" />
-               </children>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="240.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="256.0" style="-fx-background-color: Transparent;" />
-               </children>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="242.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="220.0" style="-fx-background-color: Transparent;" />
-               </children>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="242.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="217.0" style="-fx-background-color: Transparent;  " />
-               </children>
-               <padding>
-                  <Insets left="33.0" />
-               </padding>
-            </VBox>
-         </children>
-      </HBox>
+      </VBox>
    </children>
 </AnchorPane>

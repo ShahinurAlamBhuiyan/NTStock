@@ -1,23 +1,49 @@
 package Dashboards;
 
+import Auths.SignIn.UserInformation;
+
+import java.io.File;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import static Slides.SlideOne.SlideOne.loggedInUserEmail;
 import static Slides.SlideOne.SlideOne.loggedInUserID;
 
 public class SoldProductInformation {
-    private final String productName;
-    private final String productId;
-    private final String productPerPrice;
-    private final String productQuantity;
-    private final String productTotalPrice;
+    private  String productName;
+    private  String productId;
+    private  String productPerPrice;
+    private  String productQuantity;
+    private  String productTotalPrice;
 
-    private final String retailerId;
-    private final String retailerEmail;
+    private  String retailerId;
+    private  String retailerEmail;
+    private String retailerName;
     private String dealerEmail;
     private String dealerId;
-    private final String dealerName;
-    private final String buyingDate;
+    private  String dealerName;
 
-    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice,  String retailerEmail,String retailerId,  String dealerEmail,String dealerId,String dealerFirstName,String dealerLastName, String buyingDate) {
+    private  String buyingDate;
+    private String prevSellTime;
+
+    @Override
+    public String toString() {
+        return "SoldProductInformation{" +
+                "productName='" + productName + '\'' +
+                ", productId='" + productId + '\'' +
+                ", productPerPrice='" + productPerPrice + '\'' +
+                ", productQuantity='" + productQuantity + '\'' +
+                '}';
+    }
+
+    public String getPrevSellTime() {
+        return prevSellTime;
+    }
+
+    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice, String retailerEmail, String retailerId, String dealerEmail, String dealerId, String dealerFirstName, String dealerLastName, String buyingDate, String prevSellTime) {
         this.productName = productName;
         this.productId = productId;
         this.productPerPrice = productPerPrice;
@@ -29,6 +55,26 @@ public class SoldProductInformation {
         this.dealerEmail = dealerEmail;
         this.dealerId = dealerId;
         dealerName = dealerFirstName + " " + dealerLastName;
+        this.prevSellTime = prevSellTime;
+
+        ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
+        try{
+            File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+            Scanner fileReader = new Scanner(file);
+            while(fileReader.hasNext())
+            {
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+            }
+            for(UserInformation user : usersInfo){
+                if(user.getUserRandomId().equals(retailerId) && user.getEmail().equals(retailerEmail)){
+                    this.retailerName = user.getFirstName()+" "+user.getLastName();
+                    break;
+                }
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public String getProductName() {
@@ -59,6 +105,8 @@ public class SoldProductInformation {
         return retailerEmail;
     }
 
+    public String getRetailerName() {return retailerName;}
+
     public String getDealerEmail() {
         return dealerEmail;
     }
@@ -81,5 +129,41 @@ public class SoldProductInformation {
 
     public String getBuyingDate() {
         return buyingDate;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public void setProductPerPrice(String productPerPrice) {
+        this.productPerPrice = productPerPrice;
+    }
+
+    public void setProductQuantity(String productQuantity) {
+        this.productQuantity = productQuantity;
+    }
+
+    public void setProductTotalPrice(String productTotalPrice) {
+        this.productTotalPrice = productTotalPrice;
+    }
+
+    public void setRetailerId(String retailerId) {
+        this.retailerId = retailerId;
+    }
+
+    public void setRetailerEmail(String retailerEmail) {
+        this.retailerEmail = retailerEmail;
+    }
+
+    public void setDealerName(String dealerName) {
+        this.dealerName = dealerName;
+    }
+
+    public void setBuyingDate(String buyingDate) {
+        this.buyingDate = buyingDate;
     }
 }

@@ -1,5 +1,12 @@
-johnR@gmail.com johnR@gmail.com Retailer John Retailer Male 2022-12-10 2022-12-10 6558726
-johnD@gmail.com johnD@gmail.com Dealer John Dealer Male 2022-12-10 2022-12-10 222679
-johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-10 5133280
-johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948
-mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351
+johnR@gmail.com johnR@gmail.com Retailer John Retailer Male 2022-12-10 2022-12-10 6558726 * *
+johnD@gmail.com johnD@gmail.com Dealer John Dealer Male 2022-12-10 2022-12-10 222679 * *
+johnC@gmail.com johnC@gmail.com Customer John Customer Male 2022-12-10 2022-12-10 5133280 * *
+johnA@gmail.com johnA@gmail.com Administrator John Admin Male 2022-12-17 2022-12-10 6017948 * *
+mainR@gmail.com mainR@gmail.com Retailer MainR branch Male 2022-12-23 2022-12-10 8938351 * *
+shahinC@gmail.com shahinC@gmail.com Customer Shahin BhuiyanC Male 2022-12-10 2022-12-10 5110649 * * 
+Customer01@gmail.com Customer01@gmail.com Customer Customer01 cus Male 2022-12-08 2022-12-19 1644494 * *
+customer1@gmail.com customer1@gmail.com Customer Customer01 lastName Male 2023-01-07 2022-12-19 71855 * *
+customer1@gmail.com customer1@gmail.com Customer Customer01 lastName Male 2023-01-07 2022-12-19 71855 * * 
+nurD@gmail.com nurD@gmail.com Dealer NurD hasib Male 2016-12-23 2022-12-20 7320245 * * 
+nurR@gmail.com nurR@gmail.com Retailer nurR retailer Male 2022-12-31 2022-12-20 8489862 * * 
+nomanR@gmail.com nomanR@gmail.com Retailer NomanR Akanda Others 2022-12-16 2022-12-23 6222736 * * 

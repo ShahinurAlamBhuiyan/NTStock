@@ -43,7 +43,7 @@ public class AllRetailersController implements Initializable {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
                 if(user.getRole().equals("Retailer")){
@@ -63,7 +63,7 @@ public class AllRetailersController implements Initializable {
         getAllRetailers();
         RetailerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
         RetailerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
-        RetailerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("birthday"));
+        RetailerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("contactNo"));
 
 
         AllRetailersTable.setItems(retailerListR);
