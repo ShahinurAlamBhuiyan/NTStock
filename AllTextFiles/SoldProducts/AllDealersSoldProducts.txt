@@ -1,9 +1,10 @@
-Coca-cola 999999 22 28 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
-Rice 87654 150 66 10500 johnR@gmail.com 6558726 johnD@gmail.com 222669 John Dealer 2022-12-10
-Merinda-drink 909090 40 20 1200 johnR@gmail.com 6558726 nurD@gmail.com 7320245 NurD hasib 2022-12-20
-Sugar-white 5432 100 45 4950 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Merinda-drink 909090 40 20 1200 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
-Potato 00000 20 6443 128860 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10
-Merinda-drink 909090 40 20 1200 mainR@gmail.com 8938351 nurD@gmail.com 7320245 NurD hasib 2022-12-20
-Coca-cola 999999 22 28 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20
-Grill 567897 200 12 2400 nomanR@gmail.com 6222736 johnD@gmail.com 222679 John Dealer 2022-12-29
+Coca-cola 999999 22 28 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
+Rice 87654 150 65 10500 johnR@gmail.com 6558726 johnD@gmail.com 222659 John Dealer 2022-12-10 11:11:13
+Merinda-drink 909090 40 20 1200 johnR@gmail.com 6558726 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
+Sugar-white 5432 100 45 4950 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10 11:11:13
+Merinda-drink 909090 40 20 1200 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
+Potato 00000 20 6443 128860 johnR@gmail.com 6558726 johnD@gmail.com 222679 John Dealer 2022-12-10 11:11:13
+Merinda-drink 909090 40 20 1200 mainR@gmail.com 8938351 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
+Coca-cola 999999 22 28 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 11:11:13
+Grill 567897 200 12 2400 nomanR@gmail.com 6222736 johnD@gmail.com 222679 John Dealer 2022-12-29 11:11:13
+Onion 212121 25 25 625 nomanR@gmail.com 6222736 johnD@gmail.com 222679 John Dealer 2023-01-01 11:22:48

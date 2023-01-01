@@ -35,7 +35,7 @@ public class ProductPricingController {
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext())
             {
-                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                productsInfo.add(new SoldProductInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next() ,fileReader.next()));
             }
             for(SoldProductInformation product : productsInfo){
                 if(product.getProductId().equals(searchProductTF.getText())){

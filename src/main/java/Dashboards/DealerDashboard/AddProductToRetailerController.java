@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 
 import java.io.FileWriter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import static Slides.SlideOne.SlideOne.*;
 
@@ -42,10 +44,14 @@ public class AddProductToRetailerController {
         ProductTotalPriceTF.setText(String.valueOf(totalPrice));
     }
 
+
     @FXML
     void handleAddBtn(ActionEvent event) {
         System.out.println("button clicked");
-
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH:mm:ss");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String prevSellTime = dtf.format(now);
         if(!ProductNameTF.getText().equals("")
             && !ProductIDTF.getText().equals("")
                 && !ProductPerPriceTF.getText().equals("")
@@ -56,7 +62,7 @@ public class AddProductToRetailerController {
             String filePath = "AllTextFiles/SoldProducts/AllDealersSoldProducts.txt";
             try{
                 FileWriter writer = new FileWriter(filePath, true);
-                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerEmailTF.getText()+" "+RetailerIDTF.getText()+ " "+loggedInUserEmail+ " "+loggedInUserID + " "+loggedInUserName+" "+ LocalDate.now()+ "\n");
+                writer.write(ProductNameTF.getText()+" " + ProductIDTF.getText()+" " + ProductPerPriceTF.getText()+" "+ProductQuantityTF.getText()+" " + ProductTotalPriceTF.getText()+" "+RetailerEmailTF.getText()+" "+RetailerIDTF.getText()+ " "+loggedInUserEmail+ " "+loggedInUserID + " "+loggedInUserName+" "+ LocalDate.now()+" "+prevSellTime+ "\n");
                 writer.close();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Congratulations!");
