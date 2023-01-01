@@ -1,5 +1,6 @@
 package Dashboards.CustomerDashboard;
 
+import Auths.SignIn.UserInformation;
 import Dashboards.SoldProductInformation;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -66,8 +70,61 @@ public class CustomerHomeController implements Initializable {
             }
         return products;
     }
+        ArrayList<UserInformation> AllUsers = new ArrayList<UserInformation>();
+    void getAllUsers(String retailerEmail, String retailerId) {
+        try{
+//            File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+//            Scanner fileReader = new Scanner(file);
+//            while(fileReader.hasNext())
+//            {
+//                AllUsers.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next()));
+//            }
+//
+////            for (int i = 0; i < AllUsers.size(); i++){
+////                if(AllUsers.get(i).getUserRandomId().equals(retailerId) && AllUsers.get(i).getEmail().equals(retailerEmail)){
+////                    AllUsers.get(i).setIsStocker("true");
+////                }
+////            }
+//            FileWriter writer = new FileWriter("AllTextFiles/All-Users/usersSignUpInfo.txt");
+//            String newLine = "";
+//            for (int i = 0; i < AllUsers.size(); i++){
+//            writer.write(AllUsers.get(i).getEmail()+" "+AllUsers.get(i).getPassword()+" "+AllUsers.get(i).getRole()+" "+AllUsers.get(i).getFirstName()+" "+AllUsers.get(i).getLastName()+" "+AllUsers.get(i).getGender()+" "+AllUsers.get(i).getBirthday()+" "+AllUsers.get(i).getCreatingTime()+" "+AllUsers.get(i).getUserRandomId()+" "+AllUsers.get(i).getContactNo()+" "+AllUsers.get(i).getNidNo()+" "+ "true");
+////            writer.write(newLine);
+////            writer.close();
+//            }
+////            File file = new File("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
+////            Scanner readers = new Scanner(file);
+////            String newLine="";
+////            while(readers.hasNext()){
+////                String line = readers.nextLine();
+////                if(line.contains(matchedProducts.get(0).getProductId()) && line.contains(matchedProducts.get(0).getProductName())){
+////                    line =  line.replace(matchedProducts.get(0).getProductName(), productNameTF.getText());
+////                    line =  line.replace(matchedProducts.get(0).getProductPerPrice(), ProductPriceTF.getText());
+////                }
+////                newLine =newLine+ line+"\n";
+////            }
+        File file = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+        Scanner readers = new Scanner(file);
+        String newLine="";
+        while(readers.hasNext()){
+            String line = readers.nextLine();
+            if(line.contains(retailerEmail) && line.contains(retailerId)){
+                line =  line.replace("false", "true");
+            }
+            newLine =newLine+ line+"\n";
+        }
+        FileWriter writer = new FileWriter("AllTextFiles/All-Users/usersSignUpInfo.txt");
+        writer.write(newLine);
+        writer.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     void isStocker() throws ParseException {
+
+
         for(int i = 0; i < products.size(); i++){
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
@@ -89,7 +146,8 @@ public class CustomerHomeController implements Initializable {
             System.out.print(diffMinutes + " minutes, ");
             System.out.println(diffSeconds + " seconds.");
             if(diffMinutes > 7){
-                System.out.println("Notifications will send to Administrator.");
+                //AllUsers.get(i).setStocker(true);
+                getAllUsers(products.get(i).getRetailerEmail(), products.get(i).getRetailerId());
             }
         }
     }
