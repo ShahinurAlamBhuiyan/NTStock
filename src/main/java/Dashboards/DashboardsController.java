@@ -216,7 +216,17 @@ public class DashboardsController {
         }
     }
     @FXML
-    void AHandleComplainsBtn(ActionEvent event) {}
+    void AHandleComplainsBtn(ActionEvent event) {
+        try {
+            Pane p = FXMLLoader.load(getClass().getResource("/Dashboards/AdministratorDashboard/ComplainBoxContainer.fxml"));
+            MainBorderPane.setCenter(p);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("NTStock");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void AHandleStockerListBtn(ActionEvent event) {
         try {

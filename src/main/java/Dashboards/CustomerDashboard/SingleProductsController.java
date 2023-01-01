@@ -29,9 +29,6 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class SingleProductsController {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
     @FXML
     private VBox productBox;
     @FXML

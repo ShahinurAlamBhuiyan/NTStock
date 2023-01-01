@@ -6,7 +6,7 @@ public class ComplainInformation {
     private String description;
     private String complainerPhoneNo;
 
-    public ComplainInformation(String retailerOrDealerFirstName, String retailerOrDealerLastName, String description, String complainerPhoneNo) {
+    public ComplainInformation(String retailerOrDealerFirstName, String retailerOrDealerLastName, String description) {
         this.retailerOrDealerFirstName = retailerOrDealerFirstName;
         this.retailerOrDealerLastName = retailerOrDealerLastName;
         this.description = description;
