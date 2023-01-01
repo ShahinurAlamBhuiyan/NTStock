@@ -48,7 +48,7 @@ public class UsersProfileController implements Initializable {
             File file  = new File(filePath);
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext()){
-                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
         }catch(Exception e){
             System.out.println("error 52");

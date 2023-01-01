@@ -15,6 +15,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -96,12 +98,12 @@ public class SignUpController implements Initializable {
                                             FileWriter writer1 = new FileWriter(singleUserFilePath, true);
                                             writer1.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+" "+ "*" + " "+"*" + " " +"\n");
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " " + LocalDate.now() +" "+fileRandomValue+" "+ "*" + " "+"*" + " " + "false"+"\n");
 
                                             FileWriter writer2 = new FileWriter(AllUserPath, true);
                                             writer2.write(emailTField.getText() + " " + passwordTField.getText() + " " +
                                                     userTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " +
-                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+" "+ "*" + " "+"*" + " " +"\n");
+                                                    genderChoiceBox.getValue()+ " " + dobTField.getValue() + " "  + LocalDate.now() + " "+fileRandomValue+" "+ "*" + " "+"*" + " " +"false"+"\n");
                                             writer1.close();
                                             writer2.close();
                                             System.out.println("Add successfully");
@@ -171,7 +173,7 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        userTypeChoiceBox.getItems().addAll(users);
         genderChoiceBox.getItems().addAll(genders);
+        userTypeChoiceBox.getItems().addAll(users);
     }
 }

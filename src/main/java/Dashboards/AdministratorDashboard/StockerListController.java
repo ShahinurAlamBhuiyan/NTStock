@@ -17,23 +17,32 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class AllDealersController implements Initializable {
+public class StockerListController implements Initializable {
     @FXML
-    private TableView<UserInformation> AllDealersTable;
-    @FXML
-    private TableColumn<UserInformation, String> DealerName;
-    @FXML
-    private TableColumn<UserInformation, String> DealerAddress;
-    @FXML
-    private TableColumn<UserInformation, String> DealerContact;
+    private TableView<UserInformation> AllStockersTable;
 
     @FXML
-    private Label TotalDealerLabel;
+    private Button BgButton;
+
+    @FXML
+    private TableColumn<UserInformation, String> StockerAddress;
+
+    @FXML
+    private TableColumn<UserInformation, String> StockerContact;
+
+    @FXML
+    private TableColumn<UserInformation, String> StockerName;
+
+    @FXML
+    private TableColumn<UserInformation, String> StockerUID;
+
+    @FXML
+    private Label TotalStockerLabel;
 
     ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
-    ObservableList<UserInformation> dealerListR = FXCollections.observableArrayList(usersInfo);
+    ObservableList<UserInformation> stockerListR = FXCollections.observableArrayList(usersInfo);
 
-    void getAllDealers() {
+    void getAllStocker() {
         try{
             File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
             Scanner fileReader = new Scanner(file);
@@ -42,11 +51,11 @@ public class AllDealersController implements Initializable {
                 usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
             for(UserInformation user : usersInfo){
-                if(user.getRole().equals("Dealer")){
-                    dealerListR.add(user);
+                if(user.getIsStocker().equals("true")){
+                    stockerListR.add(user);
                 }
             }
-            TotalDealerLabel.setText("Total Dealers: "+ dealerListR.size());
+            TotalStockerLabel.setText("Total Stocker: "+ stockerListR.size());
 
         }catch(Exception e){
             e.printStackTrace();
@@ -56,14 +65,12 @@ public class AllDealersController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        getAllDealers();
-        DealerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
-        DealerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
-        DealerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("contactNo"));
+        getAllStocker();
+        StockerName.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userName"));
+        StockerAddress.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("email"));
+        StockerContact.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("contactNo"));
+        StockerUID.setCellValueFactory(new PropertyValueFactory<UserInformation, String>("userRandomId"));
 
-
-        AllDealersTable.setItems(dealerListR);
+        AllStockersTable.setItems(stockerListR);
     }
-
-
 }

@@ -1,5 +1,14 @@
 package Dashboards;
 
+import Auths.SignIn.UserInformation;
+
+import java.io.File;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import static Slides.SlideOne.SlideOne.loggedInUserEmail;
 import static Slides.SlideOne.SlideOne.loggedInUserID;
 
@@ -12,10 +21,13 @@ public class SoldProductInformation {
 
     private  String retailerId;
     private  String retailerEmail;
+    private String retailerName;
     private String dealerEmail;
     private String dealerId;
     private  String dealerName;
+
     private  String buyingDate;
+    private String prevSellTime;
 
     @Override
     public String toString() {
@@ -27,7 +39,11 @@ public class SoldProductInformation {
                 '}';
     }
 
-    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice, String retailerEmail, String retailerId, String dealerEmail, String dealerId, String dealerFirstName, String dealerLastName, String buyingDate) {
+    public String getPrevSellTime() {
+        return prevSellTime;
+    }
+
+    public SoldProductInformation(String productName, String productId, String productPerPrice, String productQuantity, String productTotalPrice, String retailerEmail, String retailerId, String dealerEmail, String dealerId, String dealerFirstName, String dealerLastName, String buyingDate, String prevSellTime) {
         this.productName = productName;
         this.productId = productId;
         this.productPerPrice = productPerPrice;
@@ -39,6 +55,26 @@ public class SoldProductInformation {
         this.dealerEmail = dealerEmail;
         this.dealerId = dealerId;
         dealerName = dealerFirstName + " " + dealerLastName;
+        this.prevSellTime = prevSellTime;
+
+        ArrayList<UserInformation> usersInfo = new ArrayList<UserInformation>();
+        try{
+            File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
+            Scanner fileReader = new Scanner(file);
+            while(fileReader.hasNext())
+            {
+                usersInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+            }
+            for(UserInformation user : usersInfo){
+                if(user.getUserRandomId().equals(retailerId) && user.getEmail().equals(retailerEmail)){
+                    this.retailerName = user.getFirstName()+" "+user.getLastName();
+                    break;
+                }
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public String getProductName() {
@@ -68,6 +104,8 @@ public class SoldProductInformation {
     public String getRetailerEmail() {
         return retailerEmail;
     }
+
+    public String getRetailerName() {return retailerName;}
 
     public String getDealerEmail() {
         return dealerEmail;
