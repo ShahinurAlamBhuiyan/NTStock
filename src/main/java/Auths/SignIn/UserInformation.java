@@ -14,9 +14,10 @@ public class UserInformation {
     private String userRandomId;
     private String contactNo;
     private String nidNo;
+    private String isStocker;
 
 
-    public UserInformation(String email, String password, String role, String firstName, String lastName, String gender, String birthday,  String creatingTime, String userRandomId, String contactNo, String nidNo) {
+    public UserInformation(String email, String password, String role, String firstName, String lastName, String gender, String birthday,  String creatingTime, String userRandomId, String contactNo, String nidNo, String isStocker) {
         this.email = email;
         this.password = password;
         this.role = role;
@@ -29,6 +30,15 @@ public class UserInformation {
         this.userRandomId = userRandomId;
         this.contactNo = contactNo;
         this.nidNo = nidNo;
+        this.isStocker = isStocker;
+    }
+
+    public String getIsStocker() {
+        return isStocker;
+    }
+
+    public void setIsStocker(String isStocker) {
+        this.isStocker = isStocker;
     }
 
     public String getEmail() {

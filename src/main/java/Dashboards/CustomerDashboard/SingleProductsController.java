@@ -91,7 +91,7 @@ public class SingleProductsController {
             File file = new File("AllTextFiles/Retailers/"+soldProductInformation.getRetailerEmail()+"Retailer"+soldProductInformation.getRetailerId()+".txt");
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNext()){
-                retailers.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
+                retailers.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(),fileReader.next(), fileReader.next()));
             }
         }catch(Exception e){
             e.printStackTrace();
