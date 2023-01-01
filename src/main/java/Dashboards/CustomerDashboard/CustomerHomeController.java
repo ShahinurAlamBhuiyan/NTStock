@@ -42,7 +42,6 @@ public class CustomerHomeController implements Initializable {
                     column = 0;
                     ++row;
                 }
-
                 productContainer.add(productBox, column++, row);
                 GridPane.setMargin(productBox, new Insets(15));
             }
@@ -70,46 +69,19 @@ public class CustomerHomeController implements Initializable {
             }
         return products;
     }
-        ArrayList<UserInformation> AllUsers = new ArrayList<UserInformation>();
-    void getAllUsers(String retailerEmail, String retailerId) {
+    void updateAllUsers(String retailerEmail, String retailerId, long difference) {
         try{
-//            File file  = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
-//            Scanner fileReader = new Scanner(file);
-//            while(fileReader.hasNext())
-//            {
-//                AllUsers.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next()));
-//            }
-//
-////            for (int i = 0; i < AllUsers.size(); i++){
-////                if(AllUsers.get(i).getUserRandomId().equals(retailerId) && AllUsers.get(i).getEmail().equals(retailerEmail)){
-////                    AllUsers.get(i).setIsStocker("true");
-////                }
-////            }
-//            FileWriter writer = new FileWriter("AllTextFiles/All-Users/usersSignUpInfo.txt");
-//            String newLine = "";
-//            for (int i = 0; i < AllUsers.size(); i++){
-//            writer.write(AllUsers.get(i).getEmail()+" "+AllUsers.get(i).getPassword()+" "+AllUsers.get(i).getRole()+" "+AllUsers.get(i).getFirstName()+" "+AllUsers.get(i).getLastName()+" "+AllUsers.get(i).getGender()+" "+AllUsers.get(i).getBirthday()+" "+AllUsers.get(i).getCreatingTime()+" "+AllUsers.get(i).getUserRandomId()+" "+AllUsers.get(i).getContactNo()+" "+AllUsers.get(i).getNidNo()+" "+ "true");
-////            writer.write(newLine);
-////            writer.close();
-//            }
-////            File file = new File("AllTextFiles/SoldProducts/AllDealersSoldProducts.txt");
-////            Scanner readers = new Scanner(file);
-////            String newLine="";
-////            while(readers.hasNext()){
-////                String line = readers.nextLine();
-////                if(line.contains(matchedProducts.get(0).getProductId()) && line.contains(matchedProducts.get(0).getProductName())){
-////                    line =  line.replace(matchedProducts.get(0).getProductName(), productNameTF.getText());
-////                    line =  line.replace(matchedProducts.get(0).getProductPerPrice(), ProductPriceTF.getText());
-////                }
-////                newLine =newLine+ line+"\n";
-////            }
         File file = new File("AllTextFiles/All-Users/usersSignUpInfo.txt");
         Scanner readers = new Scanner(file);
         String newLine="";
         while(readers.hasNext()){
             String line = readers.nextLine();
             if(line.contains(retailerEmail) && line.contains(retailerId)){
-                line =  line.replace("false", "true");
+                if(difference > 7) {
+                    line = line.replace("false", "true");
+                }else{
+                    line = line.replace("true", "false");
+                }
             }
             newLine =newLine+ line+"\n";
         }
@@ -122,16 +94,14 @@ public class CustomerHomeController implements Initializable {
         }
     }
 
-    void isStocker() throws ParseException {
-
-
+    public void isStocker() throws ParseException {
         for(int i = 0; i < products.size(); i++){
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
             String currentTime = dtf.format(now);
             String time1 = products.get(i).getPrevSellTime();
             String time2 = currentTime;
-//
+
             SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
             Date date1 = format.parse(time1);
             Date date2 = format.parse(time2);
@@ -145,10 +115,7 @@ public class CustomerHomeController implements Initializable {
             System.out.print(diffHours + " hours, ");
             System.out.print(diffMinutes + " minutes, ");
             System.out.println(diffSeconds + " seconds.");
-            if(diffMinutes > 7){
-                //AllUsers.get(i).setStocker(true);
-                getAllUsers(products.get(i).getRetailerEmail(), products.get(i).getRetailerId());
-            }
+            updateAllUsers(products.get(i).getRetailerEmail(), products.get(i).getRetailerId(), diffMinutes);
         }
     }
 
