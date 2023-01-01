@@ -5,9 +5,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 import java.io.File;
 import java.net.URL;
@@ -42,6 +44,8 @@ public class MyTransactionsController implements Initializable {
 
     @FXML
     private TableColumn<SoldProductInformation, String> TotalPrice;
+    @FXML
+    private Text TotalTransactionsLabel;
 
     ArrayList<SoldProductInformation> productsInfo = new ArrayList<SoldProductInformation>();
     ObservableList<SoldProductInformation> productListR = FXCollections.observableArrayList(productsInfo);
@@ -58,7 +62,7 @@ public class MyTransactionsController implements Initializable {
                 if(product.getDealerEmail().equals(loggedInUserEmail))
                 productListR.add(product);
             }
-
+            TotalTransactionsLabel.setText("Total Transactions: "+ productListR.size());
         }catch(Exception e){
             e.printStackTrace();
         }

@@ -9,3 +9,4 @@ Grill 567897 200 12 2400 nomanR@gmail.com 6222736 johnD@gmail.com 222679 John De
 Onion 212121 25 25 625 nomanR@gmail.com 6222736 johnD@gmail.com 222679 John Dealer 2023-01-01 11:22:48
 Football 123455 500 8 5000 leoR@gmail.com 9288583 johnD@gmail.com 222678 John Dealer 2023-01-01 23:37:03
 Coca-cola 999999 22 26 2700 nurR@gmail.com 8489862 nurD@gmail.com 7320245 NurD hasib 2022-12-20 23:27:39
+Jersey 555555 1190 10 11900 leoR@gmail.com 9288583 amitD@gmail.com 9646456 AmitD Sabbir 2023-01-02 02:03:39
