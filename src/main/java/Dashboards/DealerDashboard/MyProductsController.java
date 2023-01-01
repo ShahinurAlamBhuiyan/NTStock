@@ -75,3 +75,4 @@ public class MyProductsController implements Initializable {
         MyProductsTable.setItems(productListR);
     }
 }
+// merge with
