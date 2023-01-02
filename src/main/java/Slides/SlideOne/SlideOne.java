@@ -27,7 +27,7 @@ public class SlideOne extends Application {
 
         stage.show();
     }
-    // merge with  shahinn
+    // merge with  shahin branch
     public static void main(String[] args) {
         launch();
     }
