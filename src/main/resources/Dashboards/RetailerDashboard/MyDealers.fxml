@@ -15,13 +15,12 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="89.0" layoutY="108.0" prefHeight="425.0" prefWidth="812.0" style="-fx-background-color: Transparent;">
+      <TableView fx:id="DealerTableView" layoutX="89.0" layoutY="108.0" prefHeight="425.0" prefWidth="812.0" style="-fx-background-color: Transparent;">
         <columns>
-          <TableColumn minWidth="200.0" prefWidth="150.0" text="Dealer Names" />
-          <TableColumn minWidth="50.0" prefWidth="150.0" text="Contact" />
-            <TableColumn minWidth="50.0" prefWidth="150.0" text="Address" />
-            <TableColumn minWidth="50.0" prefWidth="150.0" text="Product Brought" />
-            <TableColumn minWidth="50.0" prefWidth="170.0" text="Last Brought Date" />
+          <TableColumn fx:id="DealerName" minWidth="200.0" prefWidth="150.0" text="Dealer Names" />
+          <TableColumn fx:id="DealerContact" minWidth="50.0" prefWidth="150.0" text="Email" />
+            <TableColumn fx:id="TotalPrice" minWidth="50.0" prefWidth="207.02011108398438" text="Total Price" />
+            <TableColumn fx:id="LastDate" minWidth="50.0" prefWidth="253.47991943359375" text="Last Brought Date" />
         </columns>
       </TableView>
    </children>
